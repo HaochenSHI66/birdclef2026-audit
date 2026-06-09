@@ -1,0 +1,45 @@
+{
+  "task": "full_robustness_gap_perch_vs_cnn_pann_beats",
+  "perch_focal_to_soundscape_drop": 0.0393,
+  "perch_focal_macro": 0.9283,
+  "perch_soundscape_macro": 0.7367,
+  "models_present": [
+    "cnn",
+    "pann",
+    "beats"
+  ],
+  "per_model": {
+    "cnn": {
+      "focal": 0.9472,
+      "soundscape": 0.7489,
+      "drop": 0.1984,
+      "matched_drop": 0.1984,
+      "perch_matched_drop": 0.0355,
+      "matched_gap": 0.1629,
+      "n_joint": 43,
+      "perch_more_robust": true
+    },
+    "pann": {
+      "focal": 0.9466,
+      "soundscape": 0.762,
+      "drop": 0.1847,
+      "matched_drop": 0.1847,
+      "perch_matched_drop": 0.0355,
+      "matched_gap": 0.1492,
+      "n_joint": 43,
+      "perch_more_robust": true
+    },
+    "beats": {
+      "focal": 0.9217,
+      "soundscape": 0.7402,
+      "drop": 0.1815,
+      "matched_drop": 0.1815,
+      "perch_matched_drop": 0.0355,
+      "matched_gap": 0.146,
+      "n_joint": 43,
+      "perch_more_robust": true
+    }
+  },
+  "verdict_perch_more_robust_than_all": true,
+  "interpretation": "Each challenger trained on folds 0-3, held fold 4, checkpointed, re-inferred on the 66-file/1478-window labeled soundscape set. matched_gap = challenger_drop - perch_drop on the joint class set; >0 means Perch is more robust. Verdict True iff Perch beats ALL three."
+}

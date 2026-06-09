@@ -1,0 +1,35 @@
+{
+  "task": "robustness_gap_beats_vs_perch_focal_to_soundscape",
+  "checkpoint": {
+    "path": "data/oof_rg/beatsrg_fold4_seed42.pt",
+    "seed": 42,
+    "held_fold": 4,
+    "best_val_macro_auc_native": 0.9018,
+    "best_epoch": 15,
+    "n_trained_classes": 203
+  },
+  "beats_focal_auc": 0.9217,
+  "beats_soundscape_auc": 0.7402,
+  "beats_drop": 0.1815,
+  "perch_drop": 0.0393,
+  "gap": 0.1422,
+  "common_class_count": 43,
+  "beats_focal_macro_native": 0.9065,
+  "beats_soundscape_macro_native": 0.743,
+  "beats_focal_eval_classes": 191,
+  "beats_soundscape_eval_classes": 45,
+  "perch_focal_macro_full": 0.9283,
+  "perch_soundscape_macro": 0.7367,
+  "matched_class": {
+    "n_joint_classes": 43,
+    "beats_focal_auc": 0.9217,
+    "beats_soundscape_auc": 0.7402,
+    "beats_drop": 0.1815,
+    "perch_focal_auc": 0.9305,
+    "perch_soundscape_auc": 0.895,
+    "perch_drop": 0.0355,
+    "gap_model_minus_perch": 0.146,
+    "perch_more_robust_than_model": true
+  },
+  "interpretation": "drop=focal_AUC-soundscape_AUC (larger drop=LESS robust). gap=model_drop-perch_drop; gap>0 => Perch more robust. matched_class uses the identical class set for both models."
+}

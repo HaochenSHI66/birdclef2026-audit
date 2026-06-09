@@ -1,0 +1,193 @@
+{
+  "task": "domain_shift_focal_to_soundscape",
+  "feasible": true,
+  "labeled_soundscape": {
+    "n_windows": 1478,
+    "n_files": 66,
+    "n_distinct_codes": 75,
+    "n_codes_in_234_taxonomy": 75
+  },
+  "supervised_perch_zeroshot": {
+    "soundscape_macro_auc": 0.7367,
+    "soundscape_eval_classes": 75,
+    "focal_macro_auc_full": 0.9283,
+    "n_common_eval_classes": 47,
+    "mean_per_class_auc_drop_focal_minus_soundscape": 0.0393,
+    "drop_ci95_bootstrap_over_classes": [
+      0.001,
+      0.0835
+    ],
+    "n_classes_with_drop_gt_0": 20,
+    "per_class_top": [
+      {
+        "class_idx": 165,
+        "primary_label": "redjun",
+        "class_name": "Aves",
+        "focal_auc": 0.8994,
+        "soundscape_auc": 0.4806,
+        "drop": 0.4188
+      },
+      {
+        "class_idx": 206,
+        "primary_label": "strher2",
+        "class_name": "Aves",
+        "focal_auc": 0.9362,
+        "soundscape_auc": 0.5343,
+        "drop": 0.4019
+      },
+      {
+        "class_idx": 24,
+        "primary_label": "25092",
+        "class_name": "Amphibia",
+        "focal_auc": 0.9638,
+        "soundscape_auc": 0.5642,
+        "drop": 0.3996
+      },
+      {
+        "class_idx": 214,
+        "primary_label": "trsowl",
+        "class_name": "Aves",
+        "focal_auc": 0.9607,
+        "soundscape_auc": 0.6379,
+        "drop": 0.3229
+      },
+      {
+        "class_idx": 21,
+        "primary_label": "24321",
+        "class_name": "Amphibia",
+        "focal_auc": 0.9128,
+        "soundscape_auc": 0.6335,
+        "drop": 0.2793
+      },
+      {
+        "class_idx": 8,
+        "primary_label": "22961",
+        "class_name": "Amphibia",
+        "focal_auc": 0.9718,
+        "soundscape_auc": 0.7304,
+        "drop": 0.2415
+      },
+      {
+        "class_idx": 144,
+        "primary_label": "nacnig1",
+        "class_name": "Aves",
+        "focal_auc": 0.9993,
+        "soundscape_auc": 0.8152,
+        "drop": 0.1841
+      },
+      {
+        "class_idx": 94,
+        "primary_label": "bunibi1",
+        "class_name": "Aves",
+        "focal_auc": 0.9183,
+        "soundscape_auc": 0.7364,
+        "drop": 0.1819
+      },
+      {
+        "class_idx": 65,
+        "primary_label": "67107",
+        "class_name": "Amphibia",
+        "focal_auc": 0.9683,
+        "soundscape_auc": 0.8114,
+        "drop": 0.1569
+      },
+      {
+        "class_idx": 9,
+        "primary_label": "22967",
+        "class_name": "Amphibia",
+        "focal_auc": 0.9993,
+        "soundscape_auc": 0.8506,
+        "drop": 0.1487
+      },
+      {
+        "class_idx": 160,
+        "primary_label": "purjay1",
+        "class_name": "Aves",
+        "focal_auc": 0.9374,
+        "soundscape_auc": 0.8312,
+        "drop": 0.1062
+      },
+      {
+        "class_idx": 26,
+        "primary_label": "326272",
+        "class_name": "Amphibia",
+        "focal_auc": 0.901,
+        "soundscape_auc": 0.8003,
+        "drop": 0.1006
+      },
+      {
+        "class_idx": 141,
+        "primary_label": "magant1",
+        "class_name": "Aves",
+        "focal_auc": 0.9624,
+        "soundscape_auc": 0.8683,
+        "drop": 0.0942
+      },
+      {
+        "class_idx": 215,
+        "primary_label": "undtin1",
+        "class_name": "Aves",
+        "focal_auc": 0.8973,
+        "soundscape_auc": 0.8471,
+        "drop": 0.0502
+      },
+      {
+        "class_idx": 139,
+        "primary_label": "litnig1",
+        "class_name": "Aves",
+        "focal_auc": 0.9587,
+        "soundscape_auc": 0.9149,
+        "drop": 0.0438
+      },
+      {
+        "class_idx": 64,
+        "primary_label": "66971",
+        "class_name": "Amphibia",
+        "focal_auc": 0.9997,
+        "soundscape_auc": 0.9567,
+        "drop": 0.043
+      },
+      {
+        "class_idx": 10,
+        "primary_label": "22973",
+        "class_name": "Amphibia",
+        "focal_auc": 0.9355,
+        "soundscape_auc": 0.9019,
+        "drop": 0.0336
+      },
+      {
+        "class_idx": 63,
+        "primary_label": "65380",
+        "class_name": "Amphibia",
+        "focal_auc": 0.9986,
+        "soundscape_auc": 0.9705,
+        "drop": 0.0282
+      },
+      {
+        "class_idx": 103,
+        "primary_label": "compau",
+        "class_name": "Aves",
+        "focal_auc": 0.9706,
+        "soundscape_auc": 0.9537,
+        "drop": 0.017
+      },
+      {
+        "class_idx": 136,
+        "primary_label": "limpki",
+        "class_name": "Aves",
+        "focal_auc": 0.9557,
+        "soundscape_auc": 0.9398,
+        "drop": 0.016
+      }
+    ]
+  },
+  "robustness_gap_note": "Only Perch zero-shot has soundscape predictions; trained sidecars (CNN/PANN/BEATs) were OOF-only with no saved checkpoints, so a Perch-vs-sidecar soundscape robustness gap is NOT computable here without retraining + re-inference. Reported as infeasible to avoid fabrication.",
+  "embedding_distribution_shift_descriptive": {
+    "n_focal_sampled": 1500,
+    "n_soundscape": 1478,
+    "rbf_mmd2_unbiased": 0.091669,
+    "rbf_gamma_median_heuristic": 0.027902595698833466,
+    "mean_embedding_l2_gap": 2.0344,
+    "soundscape_to_focal_std_ratio": 0.9477
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "task": "postproc_anchor_dependence",
+  "clean_reproducible_perch_zs_cv": {
+    "base_model": "perch_zeroshot_oof.npy",
+    "baseline_macro_auc": 0.9368,
+    "n_eval_classes": 202,
+    "knobs": {
+      "taxonomy_smoothing_genus_a0.1": {
+        "delta_auc": 0.0008,
+        "ci95": [
+          -0.0015,
+          0.0028
+        ],
+        "mde": 0.002,
+        "helps_at_0.05_holm": false
+      },
+      "cross_taxa_gating_b0.5": {
+        "delta_auc": -0.0032,
+        "ci95": [
+          -0.005,
+          -0.0023
+        ],
+        "mde": 0.0014,
+        "helps_at_0.05_holm": false
+      },
+      "ecological_spatial_prior_nested": {
+        "delta_auc": -0.0306,
+        "ci95": [
+          -0.0382,
+          -0.0239
+        ],
+        "mde": 0.0072,
+        "helps_at_0.05_holm": false
+      }
+    },
+    "family_verdict": "NONE help; 1 null (taxonomy), 2 significantly hurt (cross-taxa, spatial)",
+    "best_knob_delta": 0.0008,
+    "taxonomy_mde": 0.002,
+    "taxonomy_ci95": [
+      -0.0015,
+      0.0028
+    ]
+  },
+  "community_lb_stack_anecdote": {
+    "stack": "EoS8 (Perch V2 + ProtoSSM + ecological post-proc + BirdNET gating)",
+    "lb_pre_postproc_private": 0.94221,
+    "lb_tuned_postproc_private": 0.94247,
+    "lb_postproc_gain_private": 0.000260000000000038,
+    "reproducible_per_fold": false,
+    "caveat": "private LB, single point, not author-original modeling, no CI"
+  },
+  "anchor_dependence": {
+    "sign_flip": "post-proc HELPS the community EoS8 LB stack (+0.00026) but is null/hurts on the clean reproducible Perch-ZS CV (best knob +0.0008, the only non-hurting knob)",
+    "lb_gain_vs_clean_taxonomy_mde": {
+      "lb_gain": 0.000260000000000038,
+      "clean_taxonomy_mde": 0.002,
+      "lb_gain_in_clean_taxonomy_ci": true,
+      "ratio_mde_over_lbgain": 7.692307692306569,
+      "reading": "the LB post-proc gain (+0.00026) is ~7.7x below the clean-CV taxonomy MDE (0.0020) and lies inside its 95% CI [-0.0015, 0.0028] -> undetectable on the clean foundation baseline"
+    },
+    "claim": "Post-processing is anchor/context-dependent, not generally good: it nudges a heavily-engineered community stack but does not survive clean foundation-anchor CV. Contrasts with folklore that ecological post-proc is a reliable win."
+  }
+}

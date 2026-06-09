@@ -1,0 +1,49 @@
+{
+  "task": "cv_lb_concordance",
+  "feasible": "partial",
+  "configs": [
+    {
+      "name": "perch_standalone",
+      "local_cv_pooled_macro_auc": 0.9283,
+      "private_lb": 0.70571,
+      "reproducible": true
+    },
+    {
+      "name": "own_cnn_standalone",
+      "local_cv_pooled_macro_auc": 0.9382,
+      "private_lb": 0.78711,
+      "reproducible": true
+    },
+    {
+      "name": "own_ensemble_standalone",
+      "local_cv_pooled_macro_auc": 0.9428,
+      "private_lb": 0.79142,
+      "reproducible": true
+    },
+    {
+      "name": "community_eos8_analog",
+      "local_cv_pooled_macro_auc": 0.9408,
+      "private_lb": 0.94247,
+      "reproducible": false
+    }
+  ],
+  "headline_reproducible_only": {
+    "n": 3,
+    "configs": [
+      "perch_standalone",
+      "own_cnn_standalone",
+      "own_ensemble_standalone"
+    ],
+    "spearman_rho": 1.0,
+    "spearman_p": 0.0,
+    "kendall_tau": 1.0,
+    "kendall_p": 0.3333
+  },
+  "extended_with_community_analog": {
+    "n": 4,
+    "spearman_rho": 0.8,
+    "spearman_p": 0.2,
+    "kendall_tau": 0.6667
+  },
+  "caveat": "n is TINY (3 strictly-reproducible configs; 4 incl. a non-comparable community analog). The 11 submitted configs are mostly the community EoS8 stack which is NOT reproducible locally (C14). Local proxies differ from the exact submitted models (Perch-ZS vs Perch+ProtoSSM; timm-CNN vs NFNet; local 3-model vs 6-model ONNX). Late LB is CLOSED (C3). Per exp-plan-v4 this is a SANITY CHECK ONLY; we explicitly do NOT claim LB validates local effect estimates. With n=3 a permutation test has only 3!=6 orderings (min two-sided p=0.33), so significance is unattainable by construction; the rho is descriptive ordering agreement, not an inferential claim."
+}

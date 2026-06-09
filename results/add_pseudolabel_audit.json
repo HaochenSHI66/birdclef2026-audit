@@ -1,0 +1,63 @@
+{
+  "task": "soundscape_pseudolabel_headroom_audit",
+  "question": "does soundscape pseudo-labeling (the field's dominant lever) add real target-domain headroom in a clean de-biased audit, over a matched focal-only baseline?",
+  "protocol": "two CNNs, identical seed/config/fold (train folds 0-3, hold fold 4, focal loss, mixup, SpecAugment, mel cache); BASELINE = focal only; PL = focal + Perch-ZS pseudo-labeled unlabeled soundscapes; both evaluated on the 66-file labeled soundscape set on a common class set.",
+  "pl_config": {
+    "source_model": "perch_v2_zeroshot_ebird_head_maxagg",
+    "pl_rule": "per-window top-1 (sigmoid label-head saturated -> absolute threshold meaningless; ranking-based top-k is standard)",
+    "topk": 1,
+    "win_starts_sec": [
+      5,
+      25,
+      45
+    ],
+    "n_unlabeled_pool": 10592,
+    "n_files_scanned": 3000,
+    "n_windows_scanned": 9000,
+    "n_pseudo_clips": 9000,
+    "n_classes_covered_by_pseudo": 148,
+    "mean_pos_per_clip": 1.0,
+    "seed": 42
+  },
+  "soundscape_eval": {
+    "n_files": 66,
+    "n_windows": 1478,
+    "common_class_count": 45,
+    "baseline_macro_auc": 0.8031,
+    "pl_macro_auc": 0.8046,
+    "delta_auc_pl_minus_baseline": 0.0015,
+    "delta_auc_ci95_file_clustered": [
+      -0.03,
+      0.039
+    ],
+    "ci_excludes_zero": false,
+    "n_boot": 1000
+  },
+  "soundscape_own_trained_set": {
+    "baseline_classes": 45,
+    "baseline_macro_auc": 0.8031,
+    "pl_classes": 45,
+    "pl_macro_auc": 0.8046,
+    "pl_extra_classes_from_pseudo": 0
+  },
+  "focal_cv_effect": {
+    "common_class_count": 45,
+    "baseline_focal_macro_auc": 0.9474,
+    "pl_focal_macro_auc": 0.9459,
+    "delta_auc_focal": -0.0015,
+    "note": "auxiliary; PL should be neutral on clean focal CV"
+  },
+  "checkpoints": {
+    "baseline": {
+      "path": "data/oof/cnnplbase_fold4_seed42.pt",
+      "best_val_macro_auc": 0.941,
+      "best_epoch": 7
+    },
+    "pl": {
+      "path": "data/oof/cnnplpl_fold4_seed42.pt",
+      "best_val_macro_auc": 0.9433,
+      "best_epoch": 8
+    }
+  },
+  "verdict": "NULL: no detectable PL target-domain headroom (CI includes 0)"
+}

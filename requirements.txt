@@ -1,0 +1,18 @@
+# --- Analysis layer (CPU; enough to re-derive every result in results/) ---
+numpy>=1.24,<2.1
+scipy>=1.10
+scikit-learn>=1.3
+pandas>=2.0
+
+# --- Extraction / training layer (only needed to regenerate OOF arrays) ---
+# Perch-V2 is run via ONNX Runtime on CPU; sidecars were trained on Ascend NPU
+# (torch 2.10.0 + torch_npu 2.10.0). On CUDA/CPU substitute a matching torch build.
+onnxruntime>=1.17          # Perch-V2 CPU-ONNX inference (we used 1.23.2)
+librosa>=0.10              # mel / waveform feature extraction (we used 0.11.0)
+soundfile>=0.12
+timm>=0.9,<1.0             # author CNN backbone (we used 0.9.16)
+torch>=2.1                 # sidecar training (we used 2.10.0 + torch_npu on Ascend)
+tqdm>=4.65
+
+# Third-party model code/weights (Perch-V2, PANNs CNN14, BEATs) are NOT bundled;
+# obtain them from the sources listed in README.md before running the b1_* scripts.

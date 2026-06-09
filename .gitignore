@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Large regenerable artifacts (full OOF arrays ~33MB each — regenerate via b1_* scripts)
+*.npy
+!data/sample_oof/*.npy
+*.npz
+*.pt
+*.pth
+*.onnx
+*.ckpt
+
+# Third-party model code/weights must NOT be committed (obtain from original sources)
+src/beats_mod/
+
+# Local / OS
+.DS_Store
+*.log
+.env
+*.tmp

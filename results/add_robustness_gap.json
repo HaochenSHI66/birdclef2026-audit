@@ -1,0 +1,40 @@
+{
+  "task": "robustness_gap_cnn_vs_perch_focal_to_soundscape",
+  "experiment": "retrained author CNN on folds 0-3 (held fold 4) with saved checkpoint, re-inferred on the 66-file labeled soundscape set; closes the previously infeasible Perch-vs-sidecar robustness gap",
+  "checkpoint": {
+    "path": "data/oof_rg/cnnrg_fold4_seed42.pt",
+    "backbone": "tf_efficientnet_b0_ns",
+    "seed": 42,
+    "held_fold": 4,
+    "best_val_macro_auc_native": 0.9424,
+    "best_epoch": 9,
+    "n_trained_classes": 203
+  },
+  "cnn_focal_auc": 0.9472,
+  "cnn_soundscape_auc": 0.7489,
+  "cnn_drop": 0.1984,
+  "perch_drop": 0.0393,
+  "gap": 0.1591,
+  "common_class_count": 43,
+  "perch_more_robust_than_cnn": true,
+  "cnn_focal_macro_native": 0.9452,
+  "cnn_soundscape_macro_native": 0.7498,
+  "cnn_focal_eval_classes": 191,
+  "cnn_soundscape_eval_classes": 45,
+  "perch_focal_macro_full": 0.9283,
+  "perch_soundscape_macro": 0.7367,
+  "perch_drop_recomputed_check": 0.0393,
+  "perch_n_common": 47,
+  "matched_class": {
+    "n_joint_classes": 43,
+    "cnn_focal_auc": 0.9472,
+    "cnn_soundscape_auc": 0.7489,
+    "cnn_drop": 0.1984,
+    "perch_focal_auc": 0.9305,
+    "perch_soundscape_auc": 0.895,
+    "perch_drop": 0.0355,
+    "gap_cnn_minus_perch": 0.1629,
+    "perch_more_robust_than_cnn": true
+  },
+  "interpretation": "drop = focal_AUC - soundscape_AUC (larger drop = LESS robust to focal->soundscape shift). gap = cnn_drop - perch_drop; gap>0 means Perch (foundation embedding) is MORE robust than the from-scratch CNN. Matched-class section uses the identical class set for both models and is the apples-to-apples number."
+}

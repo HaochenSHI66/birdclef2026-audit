@@ -1,0 +1,81 @@
+{
+  "n_common_eval_classes": 197,
+  "N": 35549,
+  "C": 234,
+  "pos_classes": 206,
+  "macro_auc_common_mask": {
+    "perch_anchor_linear_probe": 0.9200777861134798,
+    "perch_zeroshot": 0.9356105831686389,
+    "cnn_ensemble": 0.9397804817112283,
+    "pann_ensemble": 0.9378896770374442,
+    "cnn_seed41": 0.9206415369277425,
+    "pann_seed41": 0.9261885214752763,
+    "cnn_seed42": 0.9192761855764482,
+    "pann_seed42": 0.9278522627036061,
+    "cnn_seed43": 0.9231113002205106,
+    "pann_seed43": 0.928283751735642,
+    "cnn_seed44": 0.9195643904337365,
+    "pann_seed44": 0.9266693692322837,
+    "cnn_seed45": 0.9233062763346651,
+    "pann_seed45": 0.9255219630582371
+  },
+  "native_eval_classes": {
+    "perch_anchor_linear_probe": 199,
+    "perch_zeroshot": 202,
+    "cnn_ensemble": 199,
+    "pann_ensemble": 199,
+    "cnn_seed41": 199,
+    "pann_seed41": 199,
+    "cnn_seed42": 199,
+    "pann_seed42": 199,
+    "cnn_seed43": 199,
+    "pann_seed43": 199,
+    "cnn_seed44": 199,
+    "pann_seed44": 199,
+    "cnn_seed45": 199,
+    "pann_seed45": 199
+  },
+  "all_nan_rows": {
+    "perch_anchor_linear_probe": 0,
+    "perch_zeroshot": 0,
+    "cnn_ensemble": 0,
+    "pann_ensemble": 0,
+    "cnn_seed41": 0,
+    "pann_seed41": 0,
+    "cnn_seed42": 0,
+    "pann_seed42": 0,
+    "cnn_seed43": 0,
+    "pann_seed43": 0,
+    "cnn_seed44": 0,
+    "pann_seed44": 0,
+    "cnn_seed45": 0,
+    "pann_seed45": 0
+  },
+  "cnn_seed_spread": {
+    "mean": 0.9211799378986207,
+    "std": 0.0017190472759019276,
+    "min": 0.9192761855764482,
+    "max": 0.9233062763346651,
+    "per_seed": {
+      "41": 0.9206415369277425,
+      "42": 0.9192761855764482,
+      "43": 0.9231113002205106,
+      "44": 0.9195643904337365,
+      "45": 0.9233062763346651
+    }
+  },
+  "pann_seed_spread": {
+    "mean": 0.926903173641009,
+    "std": 0.001027608954574548,
+    "min": 0.9255219630582371,
+    "max": 0.928283751735642,
+    "per_seed": {
+      "41": 0.9261885214752763,
+      "42": 0.9278522627036061,
+      "43": 0.928283751735642,
+      "44": 0.9266693692322837,
+      "45": 0.9255219630582371
+    }
+  },
+  "gates": []
+}

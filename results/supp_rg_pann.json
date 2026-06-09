@@ -1,0 +1,35 @@
+{
+  "task": "robustness_gap_pann_vs_perch_focal_to_soundscape",
+  "checkpoint": {
+    "path": "data/oof_rg/pannrg_fold4_seed42.pt",
+    "seed": 42,
+    "held_fold": 4,
+    "best_val_macro_auc_native": 0.946,
+    "best_epoch": 16,
+    "n_trained_classes": 203
+  },
+  "pann_focal_auc": 0.9466,
+  "pann_soundscape_auc": 0.762,
+  "pann_drop": 0.1847,
+  "perch_drop": 0.0393,
+  "gap": 0.1454,
+  "common_class_count": 43,
+  "pann_focal_macro_native": 0.95,
+  "pann_soundscape_macro_native": 0.7673,
+  "pann_focal_eval_classes": 191,
+  "pann_soundscape_eval_classes": 45,
+  "perch_focal_macro_full": 0.9283,
+  "perch_soundscape_macro": 0.7367,
+  "matched_class": {
+    "n_joint_classes": 43,
+    "pann_focal_auc": 0.9466,
+    "pann_soundscape_auc": 0.762,
+    "pann_drop": 0.1847,
+    "perch_focal_auc": 0.9305,
+    "perch_soundscape_auc": 0.895,
+    "perch_drop": 0.0355,
+    "gap_model_minus_perch": 0.1492,
+    "perch_more_robust_than_model": true
+  },
+  "interpretation": "drop=focal_AUC-soundscape_AUC (larger drop=LESS robust). gap=model_drop-perch_drop; gap>0 => Perch more robust. matched_class uses the identical class set for both models."
+}

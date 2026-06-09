@@ -1,0 +1,185 @@
+{
+  "task": "positive_headroom_exclusion_test",
+  "method": "one-sided H0: debiased_delta >= +delta; z=(mean-delta)/se; reject (positive headroom excluded) if p_upper<0.05. Normal approx on author-clustered bootstrap mean/se; matches the UPPER test of the stored TOST.",
+  "deltas_tested": [
+    0.005,
+    0.01
+  ],
+  "cells": {
+    "perch_linear_probe+CNN": {
+      "debiased_mean": -0.006394942378431658,
+      "se": 0.0032276254161027083,
+      "debiased_ci95_pctl": [
+        -0.013182098582196383,
+        -0.0004831239643162599
+      ],
+      "upper95_onesided": -0.0010859710063143646,
+      "excl_+0.005": {
+        "z": -3.5304413955789267,
+        "p_upper": 0.0002074334559777606,
+        "pos_headroom_excluded": true
+      },
+      "excl_+0.01": {
+        "z": -5.079567875701082,
+        "p_upper": 1.8914717531462548e-07,
+        "pos_headroom_excluded": true
+      },
+      "stored_tost_p_upper_0.01": 1.8914717531462548e-07,
+      "stored_tost_p_upper_0.005": 0.0002074334559777606
+    },
+    "perch_linear_probe+PANN": {
+      "debiased_mean": -0.0019231343428635324,
+      "se": 0.0029368831975571147,
+      "debiased_ci95_pctl": [
+        -0.00748837114243173,
+        0.0035398863193355492
+      ],
+      "upper95_onesided": 0.002907608636571124,
+      "excl_+0.005": {
+        "z": -2.357306667361563,
+        "p_upper": 0.009204018936908899,
+        "pos_headroom_excluded": true
+      },
+      "excl_+0.01": {
+        "z": -4.059791806763421,
+        "p_upper": 2.4558245255708996e-05,
+        "pos_headroom_excluded": true
+      },
+      "stored_tost_p_upper_0.01": 2.4558245255708996e-05,
+      "stored_tost_p_upper_0.005": 0.009204018936908899
+    },
+    "perch_linear_probe+BEATs": {
+      "debiased_mean": -0.017845345971784637,
+      "se": 0.0021330268412115276,
+      "debiased_ci95_pctl": [
+        -0.022284108609996675,
+        -0.013629822188453454
+      ],
+      "upper95_onesided": -0.014336829035633014,
+      "excl_+0.005": {
+        "z": -10.71029465283654,
+        "p_upper": 4.5535743440124706e-27,
+        "pos_headroom_excluded": true
+      },
+      "excl_+0.01": {
+        "z": -13.05438142352156,
+        "p_upper": 2.999767620389604e-39,
+        "pos_headroom_excluded": true
+      },
+      "stored_tost_p_upper_0.01": 2.999767620389604e-39,
+      "stored_tost_p_upper_0.005": 4.5535743440124706e-27
+    },
+    "perch_linear_probe+CNN+PANN+BEATs": {
+      "debiased_mean": -0.00840531157599729,
+      "se": 0.002672002842150082,
+      "debiased_ci95_pctl": [
+        -0.013921666897709104,
+        -0.0034049507165122015
+      ],
+      "upper95_onesided": -0.004010258009862086,
+      "excl_+0.005": {
+        "z": -5.016952588721961,
+        "p_upper": 2.6248758054723826e-07,
+        "pos_headroom_excluded": true
+      },
+      "excl_+0.01": {
+        "z": -6.888208083336872,
+        "p_upper": 2.824976432005662e-12,
+        "pos_headroom_excluded": true
+      },
+      "stored_tost_p_upper_0.01": 2.824976432005662e-12,
+      "stored_tost_p_upper_0.005": 2.6248758054723826e-07
+    },
+    "perch_zeroshot+CNN": {
+      "debiased_mean": -0.024155792576151514,
+      "se": 0.0035649285441913432,
+      "debiased_ci95_pctl": [
+        -0.03053220081308357,
+        -0.016990056934889718
+      ],
+      "upper95_onesided": -0.018292006930415553,
+      "excl_+0.005": {
+        "z": -8.178506866191654,
+        "p_upper": 1.4369131413271484e-16,
+        "pos_headroom_excluded": true
+      },
+      "excl_+0.01": {
+        "z": -9.581059522723,
+        "p_upper": 4.8027216526719265e-22,
+        "pos_headroom_excluded": true
+      },
+      "stored_tost_p_upper_0.01": 4.8027216526719265e-22,
+      "stored_tost_p_upper_0.005": 1.4369131413271484e-16
+    },
+    "perch_zeroshot+PANN": {
+      "debiased_mean": -0.013832756334818586,
+      "se": 0.003938652917440219,
+      "debiased_ci95_pctl": [
+        -0.019946377282477987,
+        -0.006518466856236889
+      ],
+      "upper95_onesided": -0.007354248798264045,
+      "excl_+0.005": {
+        "z": -4.781522192886758,
+        "p_upper": 8.698639622967412e-07,
+        "pos_headroom_excluded": true
+      },
+      "excl_+0.01": {
+        "z": -6.050991756417013,
+        "p_upper": 7.197840773510175e-10,
+        "pos_headroom_excluded": true
+      },
+      "stored_tost_p_upper_0.01": 7.197840773510175e-10,
+      "stored_tost_p_upper_0.005": 8.698639622967412e-07
+    },
+    "perch_zeroshot+BEATs": {
+      "debiased_mean": -0.0033253247081329925,
+      "se": 0.0021941932919876178,
+      "debiased_ci95_pctl": [
+        -0.007232797894185496,
+        0.0006908649223130326
+      ],
+      "upper95_onesided": 0.0002838020864254307,
+      "excl_+0.005": {
+        "z": -3.7942531036504388,
+        "p_upper": 7.404427729684535e-05,
+        "pos_headroom_excluded": true
+      },
+      "excl_+0.01": {
+        "z": -6.07299491653363,
+        "p_upper": 6.277321559056594e-10,
+        "pos_headroom_excluded": true
+      },
+      "stored_tost_p_upper_0.01": 6.277321559056594e-10,
+      "stored_tost_p_upper_0.005": 7.404427729684535e-05
+    },
+    "perch_zeroshot+CNN+PANN+BEATs": {
+      "debiased_mean": -0.013952072024127026,
+      "se": 0.0035961282594888654,
+      "debiased_ci95_pctl": [
+        -0.02023723155708636,
+        -0.007058682087952746
+      ],
+      "upper95_onesided": -0.008036967413524082,
+      "excl_+0.005": {
+        "z": -5.27013239144612,
+        "p_upper": 6.816269699269032e-08,
+        "pos_headroom_excluded": true
+      },
+      "excl_+0.01": {
+        "z": -6.6605166155924165,
+        "p_upper": 1.3643335767781597e-11,
+        "pos_headroom_excluded": true
+      },
+      "stored_tost_p_upper_0.01": 1.3643335767781597e-11,
+      "stored_tost_p_upper_0.005": 6.816269699269032e-08
+    }
+  },
+  "summary": {
+    "n_cells": 8,
+    "n_cells_pos_headroom_0.01_excluded": 8,
+    "n_cells_pos_headroom_0.005_excluded": 8,
+    "max_upper95_onesided_across_cells": 0.002907608636571124,
+    "statement": "No cell shows >=+0.01 deployable hard-selection headroom: the >=+0.01 null is rejected in 8/8 cells; the >=+0.005 null is rejected in 8/8 cells. The largest one-sided 95% upper bound on de-biased delta-AUC across all 8 cells is +0.00291."
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "n_classes": 234,
+  "n_mapped": 203,
+  "n_unmapped": 31,
+  "stage_counts": {
+    "exact_ebird": 158,
+    "sciname_fallback": 45,
+    "unmapped": 31
+  },
+  "n_evaluable_classes": 206,
+  "n_unmapped_evaluable": 4,
+  "unmapped_total_positives": 10,
+  "unmapped_classes": [
+    {
+      "col": 1,
+      "primary_label": "116570",
+      "class_name": "Reptilia",
+      "n_positives": 1,
+      "evaluable": true
+    },
+    {
+      "col": 3,
+      "primary_label": "1491113",
+      "class_name": "Amphibia",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 4,
+      "primary_label": "1595929",
+      "class_name": "Amphibia",
+      "n_positives": 5,
+      "evaluable": true
+    },
+    {
+      "col": 23,
+      "primary_label": "25073",
+      "class_name": "Amphibia",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 30,
+      "primary_label": "47158son01",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 31,
+      "primary_label": "47158son02",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 32,
+      "primary_label": "47158son03",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 33,
+      "primary_label": "47158son04",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 34,
+      "primary_label": "47158son05",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 35,
+      "primary_label": "47158son06",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 36,
+      "primary_label": "47158son07",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 37,
+      "primary_label": "47158son08",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 38,
+      "primary_label": "47158son09",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 39,
+      "primary_label": "47158son10",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 40,
+      "primary_label": "47158son11",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 41,
+      "primary_label": "47158son12",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 42,
+      "primary_label": "47158son13",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 43,
+      "primary_label": "47158son14",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 44,
+      "primary_label": "47158son15",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 45,
+      "primary_label": "47158son16",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 46,
+      "primary_label": "47158son17",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 47,
+      "primary_label": "47158son18",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 48,
+      "primary_label": "47158son19",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 49,
+      "primary_label": "47158son20",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 50,
+      "primary_label": "47158son21",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 51,
+      "primary_label": "47158son22",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 52,
+      "primary_label": "47158son23",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 53,
+      "primary_label": "47158son24",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 54,
+      "primary_label": "47158son25",
+      "class_name": "Insecta",
+      "n_positives": 0,
+      "evaluable": false
+    },
+    {
+      "col": 56,
+      "primary_label": "516975",
+      "class_name": "Mammalia",
+      "n_positives": 1,
+      "evaluable": true
+    },
+    {
+      "col": 70,
+      "primary_label": "74580",
+      "class_name": "Mammalia",
+      "n_positives": 3,
+      "evaluable": true
+    }
+  ],
+  "zeroshot_macro_auc_ceiling_if_unmapped_pinned_chance": 0.9902912621359223,
+  "zeroshot_macro_auc_ceiling_drag_vs_perfect": 0.009708737864077666,
+  "zeroshot_achieved_macro_auc_evaluable": 0.9367720403353237,
+  "zeroshot_auc_on_unmapped_evaluable_classes": {
+    "1": NaN,
+    "4": NaN,
+    "56": NaN,
+    "70": NaN
+  },
+  "mean_zs_auc_on_unmapped_evaluable": null,
+  "note": "31 classes have NO Perch zero-shot index (eBird synonym / taxonomy version pin vs the Perch label set): non-bird taxa (Insecta/Reptilia/Amphibia/Mammalia) absent from Perch's avian label space + a few eBird-code synonyms. Only 4 of the 31 are AUC-evaluable (>=1 focal positive, both classes), carrying 10 total positives, so the macro-AUC ceiling drag on the ZERO-SHOT pathway is negligible. Linear-probe/CNN DO train these columns, so the unmapped set caps only the zero-shot retrieval pathway, not the supervised models."
+}

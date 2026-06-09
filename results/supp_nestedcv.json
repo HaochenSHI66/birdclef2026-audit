@@ -1,0 +1,274 @@
+{
+  "seed": 42,
+  "n_boot": 2000,
+  "n_null": 200,
+  "rows": 35549,
+  "n_authors": 4017,
+  "note": "Nested base OOF: selection-set rows use inner-OOF preds trained without the outer fold; apply rows use standard one-seed OOF. Compared to global one-seed OOF (selection leaks outer fold).",
+  "cells": {
+    "LP+CNN": {
+      "global": {
+        "variant": "global",
+        "n_common_eval_classes": 196,
+        "per_model_macro_auc": {
+          "perch_linear_probe": 0.9201624563157593,
+          "cnn": 0.9206593940945074
+        },
+        "best_single_model": "cnn",
+        "best_single_macro_auc": 0.9206593940945074,
+        "heldout_oracle_macro_auc": 0.9266939876330303,
+        "heldout_minus_best_single_point": 0.006034593538522981,
+        "null_labelperm_mean": 0.010914645315438455,
+        "headroom_debiased_mean": -0.004725790626434029,
+        "headroom_debiased_ci95": [
+          -0.011309299134596922,
+          0.0020628839506124323
+        ],
+        "headroom_raw_mean": 0.006188854689004426,
+        "headroom_raw_ci95": [
+          -0.00039465381915846645,
+          0.012977529266050888
+        ],
+        "se": 0.0033923091192635713,
+        "fusion_macro_auc": 0.9322806224705136,
+        "fusion_minus_best_single_point": 0.01162122837600621,
+        "fusion_delta_ci95": [
+          0.008798191045399173,
+          0.015294681271862001
+        ]
+      },
+      "nested": {
+        "variant": "nested",
+        "n_common_eval_classes": 196,
+        "per_model_macro_auc": {
+          "perch_linear_probe": 0.9201624563157593,
+          "cnn": 0.9206593940945074
+        },
+        "best_single_model": "cnn",
+        "best_single_macro_auc": 0.9206593940945074,
+        "heldout_oracle_macro_auc": 0.917539651247068,
+        "heldout_minus_best_single_point": -0.003119742847439322,
+        "null_labelperm_mean": -0.0008310368848635235,
+        "headroom_debiased_mean": -0.004820877079014507,
+        "headroom_debiased_ci95": [
+          -0.012039774591898422,
+          0.002125082012638066
+        ],
+        "headroom_raw_mean": -0.005651913963878031,
+        "headroom_raw_ci95": [
+          -0.012870811476761945,
+          0.0012940451277745424
+        ],
+        "se": 0.003602979585225316,
+        "fusion_macro_auc": 0.9309186413776747,
+        "fusion_minus_best_single_point": 0.010259247283167294,
+        "fusion_delta_ci95": [
+          0.005862286693822679,
+          0.014327930317380654
+        ]
+      },
+      "nested_minus_global_debiased": -9.508645258047774e-05,
+      "verdict_debiased_le0_survives_nested": true
+    },
+    "LP+PANN": {
+      "global": {
+        "variant": "global",
+        "n_common_eval_classes": 196,
+        "per_model_macro_auc": {
+          "perch_linear_probe": 0.9201624563157593,
+          "pann": 0.9272332896318144
+        },
+        "best_single_model": "pann",
+        "best_single_macro_auc": 0.9272332896318144,
+        "heldout_oracle_macro_auc": 0.9332179211079471,
+        "heldout_minus_best_single_point": 0.005984631476132707,
+        "null_labelperm_mean": 0.007034359118016722,
+        "headroom_debiased_mean": -0.001450369362545066,
+        "headroom_debiased_ci95": [
+          -0.007398027073153884,
+          0.004339048552205918
+        ],
+        "headroom_raw_mean": 0.005583989755471656,
+        "headroom_raw_ci95": [
+          -0.0003636679551371619,
+          0.01137340767022264
+        ],
+        "se": 0.0030646463354106995,
+        "fusion_macro_auc": 0.9354110476514031,
+        "fusion_minus_best_single_point": 0.008177758019588754,
+        "fusion_delta_ci95": [
+          0.005338936423948101,
+          0.011848878960638775
+        ]
+      },
+      "nested": {
+        "variant": "nested",
+        "n_common_eval_classes": 196,
+        "per_model_macro_auc": {
+          "perch_linear_probe": 0.9201624563157593,
+          "pann": 0.9272332896318144
+        },
+        "best_single_model": "pann",
+        "best_single_macro_auc": 0.9272332896318144,
+        "heldout_oracle_macro_auc": 0.9223349545917573,
+        "heldout_minus_best_single_point": -0.0048983350400571,
+        "null_labelperm_mean": -0.0029466499491635945,
+        "headroom_debiased_mean": -0.004930306812678111,
+        "headroom_debiased_ci95": [
+          -0.012525225027633057,
+          0.002405562570919301
+        ],
+        "headroom_raw_mean": -0.007876956761841705,
+        "headroom_raw_ci95": [
+          -0.01547187497679665,
+          -0.0005410873782442935
+        ],
+        "se": 0.003802269591282529,
+        "fusion_macro_auc": 0.935832722210427,
+        "fusion_minus_best_single_point": 0.00859943257861262,
+        "fusion_delta_ci95": [
+          0.005282778800084637,
+          0.012293455231936368
+        ]
+      },
+      "nested_minus_global_debiased": -0.003479937450133045,
+      "verdict_debiased_le0_survives_nested": true
+    },
+    "LP+CNN+PANN": {
+      "global": {
+        "variant": "global",
+        "n_common_eval_classes": 196,
+        "per_model_macro_auc": {
+          "perch_linear_probe": 0.9201624563157593,
+          "cnn": 0.9206593940945074,
+          "pann": 0.9272332896318144
+        },
+        "best_single_model": "pann",
+        "best_single_macro_auc": 0.9272332896318144,
+        "heldout_oracle_macro_auc": 0.936031053702456,
+        "heldout_minus_best_single_point": 0.00879776407064159,
+        "null_labelperm_mean": 0.008533845678775943,
+        "headroom_debiased_mean": -1.0797238682129506e-07,
+        "headroom_debiased_ci95": [
+          -0.005870800112604525,
+          0.0058542420590599765
+        ],
+        "headroom_raw_mean": 0.008533737706389122,
+        "headroom_raw_ci95": [
+          0.002663045566171418,
+          0.01438808773783592
+        ],
+        "se": 0.0030090631035519697,
+        "fusion_macro_auc": 0.9396916229853731,
+        "fusion_minus_best_single_point": 0.012458333353558726,
+        "fusion_delta_ci95": [
+          0.009608252441539155,
+          0.01612720642472145
+        ]
+      },
+      "nested": {
+        "variant": "nested",
+        "n_common_eval_classes": 196,
+        "per_model_macro_auc": {
+          "perch_linear_probe": 0.9201624563157593,
+          "cnn": 0.9206593940945074,
+          "pann": 0.9272332896318144
+        },
+        "best_single_model": "pann",
+        "best_single_macro_auc": 0.9272332896318144,
+        "heldout_oracle_macro_auc": 0.9288481073928334,
+        "heldout_minus_best_single_point": 0.0016148177610190162,
+        "null_labelperm_mean": -0.0023830218108808966,
+        "headroom_debiased_mean": 0.00013359925264683345,
+        "headroom_debiased_ci95": [
+          -0.0060984684704851085,
+          0.006660514561318633
+        ],
+        "headroom_raw_mean": -0.002249422558234063,
+        "headroom_raw_ci95": [
+          -0.008481490281366005,
+          0.004277492750437737
+        ],
+        "se": 0.0032577388095047506,
+        "fusion_macro_auc": 0.9398373210461229,
+        "fusion_minus_best_single_point": 0.012604031414308547,
+        "fusion_delta_ci95": [
+          0.008855431474716268,
+          0.01628240061160287
+        ]
+      },
+      "nested_minus_global_debiased": 0.00013370722503365474,
+      "verdict_debiased_le0_survives_nested": false
+    },
+    "LP+CNN+PANN+BEATs": {
+      "global": {
+        "variant": "global",
+        "n_common_eval_classes": 196,
+        "per_model_macro_auc": {
+          "perch_linear_probe": 0.9201624563157593,
+          "cnn": 0.9206593940945074,
+          "pann": 0.9272332896318144,
+          "beats": 0.8801008816913576
+        },
+        "best_single_model": "pann",
+        "best_single_macro_auc": 0.9272332896318144,
+        "heldout_oracle_macro_auc": 0.9375439584192259,
+        "heldout_minus_best_single_point": 0.010310668787411492,
+        "null_labelperm_mean": 0.008630259868327184,
+        "headroom_debiased_mean": 0.00070834149928275,
+        "headroom_debiased_ci95": [
+          -0.005449781440827481,
+          0.006900446356568559
+        ],
+        "headroom_raw_mean": 0.009338601367609934,
+        "headroom_raw_ci95": [
+          0.0031804784274997028,
+          0.015530706224895743
+        ],
+        "se": 0.0031371994283304417,
+        "fusion_macro_auc": 0.9399499643197226,
+        "fusion_minus_best_single_point": 0.012716674687908158,
+        "fusion_delta_ci95": [
+          0.009585307738479796,
+          0.01641958830238099
+        ]
+      },
+      "nested": {
+        "variant": "nested",
+        "n_common_eval_classes": 196,
+        "per_model_macro_auc": {
+          "perch_linear_probe": 0.9201624563157593,
+          "cnn": 0.9206593940945074,
+          "pann": 0.9272332896318144,
+          "beats": 0.8801008816913576
+        },
+        "best_single_model": "pann",
+        "best_single_macro_auc": 0.9272332896318144,
+        "heldout_oracle_macro_auc": 0.926895835382208,
+        "heldout_minus_best_single_point": -0.0003374542496064059,
+        "null_labelperm_mean": 0.0014034589693032512,
+        "headroom_debiased_mean": -0.006112104087309653,
+        "headroom_debiased_ci95": [
+          -0.013694584139777522,
+          0.0016963356895313962
+        ],
+        "headroom_raw_mean": -0.0047086451180064015,
+        "headroom_raw_ci95": [
+          -0.01229112517047427,
+          0.0030997946588346473
+        ],
+        "se": 0.003979771950650819,
+        "fusion_macro_auc": 0.9400301604679755,
+        "fusion_minus_best_single_point": 0.0127968708361611,
+        "fusion_delta_ci95": [
+          0.009440246575542145,
+          0.016449837844838184
+        ]
+      },
+      "nested_minus_global_debiased": -0.006820445586592403,
+      "verdict_debiased_le0_survives_nested": true
+    }
+  },
+  "overall_verdict_all_cells_survive": false,
+  "n_workers": 64
+}

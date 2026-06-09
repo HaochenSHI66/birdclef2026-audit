@@ -1,0 +1,53 @@
+{
+  "task": "postproc_ablation",
+  "base_model": "perch_zeroshot_oof.npy",
+  "n_eval_classes": 202,
+  "baseline_macro_auc": 0.9368,
+  "n_boot_author_clustered": 200,
+  "multiplicity": "Holm (FWER) + BH-FDR over the 3-knob family",
+  "knobs": {
+    "taxonomy_smoothing_genus_a0.1": {
+      "knob_macro_auc": 0.9376,
+      "delta_auc": 0.0008,
+      "ci95": [
+        -0.0015,
+        0.0028
+      ],
+      "se": 0.001,
+      "mde": 0.002,
+      "p_raw": 0.4389,
+      "p_holm": 0.4389,
+      "p_bh_fdr": 0.4389,
+      "helps_at_0.05_holm": false
+    },
+    "cross_taxa_gating_b0.5": {
+      "knob_macro_auc": 0.9335,
+      "delta_auc": -0.0032,
+      "ci95": [
+        -0.005,
+        -0.0023
+      ],
+      "se": 0.0007,
+      "mde": 0.0014,
+      "p_raw": 0.0,
+      "p_holm": 0.0,
+      "p_bh_fdr": 0.0,
+      "helps_at_0.05_holm": false
+    },
+    "ecological_spatial_prior_nested": {
+      "knob_macro_auc": 0.9062,
+      "delta_auc": -0.0306,
+      "ci95": [
+        -0.0382,
+        -0.0239
+      ],
+      "se": 0.0037,
+      "mde": 0.0072,
+      "p_raw": 0.0,
+      "p_holm": 0.0,
+      "p_bh_fdr": 0.0,
+      "helps_at_0.05_holm": false
+    }
+  },
+  "feasibility_note": "taxonomy + cross-taxa fully reproducible from taxonomy.csv + OOF; spatial prior is a NESTED fold-safe offline proxy using GLOBAL iNat lat/lon (focal recordings are not at the Pantanal test sites), so its effect is a descriptive lower-bound on what a true site prior could do."
+}

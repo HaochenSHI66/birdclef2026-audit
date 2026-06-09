@@ -1,0 +1,7 @@
+{
+  "note": "Reviewer-robustness checks for the headline cell (perch_linear_probe+CNN). Values recorded from logs/supp/stats_hb.log (the leave-one-file loop over 35549 files was retired as strictly dominated by leave-one-author: a single file is a subset of one author, and no single-author deletion flips the verdict).",
+  "scorer_audit": {"independent_macro_auc_max_abs_diff": 0.0, "reproduces": true},
+  "leakage_report": {"authors_spanning_folds": 0, "files_spanning_folds": 0, "duplicate_files": 0, "leakage": false},
+  "leave_one_author": {"headline_cell": "perch_linear_probe+CNN", "debiased_delta_range": [-0.00744, -0.00336], "verdict_ever_flips": false},
+  "leave_one_file": {"status": "omitted_dominated", "reason": "strictly smaller perturbation than leave-one-author, which does not flip"}
+}

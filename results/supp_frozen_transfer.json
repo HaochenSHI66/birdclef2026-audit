@@ -1,0 +1,101 @@
+{
+  "task": "frozen_focal_to_soundscape_selector_fusion_transfer",
+  "design": {
+    "candidates": [
+      "perch_zs",
+      "cnn",
+      "pann",
+      "beats"
+    ],
+    "learn_on": "focal fold-4 held-out OOF of the same models (apples-to-apples with the fold-4 checkpoints deployed on soundscape)",
+    "apply_on": "66-file / 1478-window labeled soundscape",
+    "selector": "per-class argmax of focal-CV per-class AUC (base-only primary; +mean variant recorded), FROZEN, applied to soundscape columns",
+    "fusion": "per-class LogisticRegression on [logit(model)] fit on focal, FROZEN, applied to soundscape logits (paper's calibrated logit stacker)",
+    "best_single": "perch_zs",
+    "mask": "FIXED soundscape common evaluable class mask (>=1 pos & >=1 neg & all 4 base models non-NaN); recomputed-per-replicate only for AUC-definedness",
+    "bootstrap": "file-clustered, resample 66 files, n_boot=2000",
+    "n_focal_rows": 6922,
+    "n_soundscape_windows": 1478,
+    "n_soundscape_files": 66,
+    "n_common_eval_classes": 45,
+    "fusion_classes_fit": 42,
+    "fusion_classes_fallback_mean": 3,
+    "artifact_provenance": {
+      "perch_zs_focal": "perch_zeroshot_oof.npy[fold==4]",
+      "cnn_focal": "oof_rg/cnnrg_fold4_seed42.npy (exact deployed checkpoint)",
+      "pann_focal": "pann_fold4_seed42.npy (same config/seed as pannrg ckpt)",
+      "beats_focal": "beats_fold4_seed42.npy (same config/seed as beatsrg ckpt)",
+      "perch_zs_ss": "ss_perch_labelhead.npy mapped (max) -> 234",
+      "cnn_ss": "oof_rg/ss_cnnrg_preds.npy",
+      "pann_ss": "oof_rg/ss_pannrg_preds.npy",
+      "beats_ss": "oof_rg/ss_beatsrg_preds.npy"
+    }
+  },
+  "soundscape_macro_auc_over_mask": {
+    "per_model": {
+      "perch_zs": 0.8906,
+      "cnn": 0.7498,
+      "pann": 0.7673,
+      "beats": 0.743
+    },
+    "best_single": 0.8906,
+    "frozen_hard_selector_base": 0.8019,
+    "frozen_hard_selector_with_mean": 0.8214,
+    "frozen_fusion": 0.8761,
+    "n_common_defined_classes_point": 45
+  },
+  "delta_vs_best_single_file_clustered_bootstrap": {
+    "frozen_hard_selector_base": {
+      "mean": -0.0779563610332517,
+      "ci95": [
+        -0.11179021073937642,
+        -0.0392034214533811
+      ],
+      "se": 0.018281550941109746,
+      "n_boot": 2000
+    },
+    "frozen_hard_selector_with_mean": {
+      "mean": -0.062349927089084656,
+      "ci95": [
+        -0.09127628273614467,
+        -0.03146964257124015
+      ],
+      "se": 0.015381101429270802,
+      "n_boot": 2000
+    },
+    "frozen_fusion": {
+      "mean": -0.011797320901249004,
+      "ci95": [
+        -0.0300646797418351,
+        0.00726437682963578
+      ],
+      "se": 0.009452776595997036,
+      "n_boot": 2000
+    }
+  },
+  "selector_choice_counts_base": {
+    "perch_zs": 20,
+    "cnn": 7,
+    "pann": 15,
+    "beats": 3
+  },
+  "selector_choice_counts_with_mean": {
+    "perch_zs": 13,
+    "cnn": 6,
+    "pann": 9,
+    "beats": 3,
+    "mean": 14
+  },
+  "paper_claim_reference": {
+    "focal_cv_fusion_delta": 0.009,
+    "soundscape_lb_fusion_delta": 0.037,
+    "note": "Existing claim '+0.009 focal CV -> +0.037 soundscape LB' rests on single LB points; this experiment re-tests it with a file-bootstrap."
+  },
+  "verdict": {
+    "frozen_selector_helps_target": false,
+    "frozen_fusion_helps_target": false,
+    "supports_fusion_grows_under_shift": false,
+    "statement": "CONTRADICTS: frozen focal-learned fusion does NOT significantly help on the soundscape target (95% file-clustered CI includes 0) -> the '+0.009 focal -> +0.037 soundscape, fusion grows under shift' claim is NOT supported under a proper file-bootstrapped frozen-transfer eval. DELETE the claim (do not soften)."
+  },
+  "runtime_min": 1.53
+}

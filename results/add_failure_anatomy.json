@@ -1,0 +1,726 @@
+{
+  "task": "soundscape_failure_anatomy",
+  "n_common_classes": 45,
+  "validation_vs_stored_top5": {
+    "rows": [
+      {
+        "label": "redjun",
+        "stored_drop": 0.4188,
+        "recomputed_drop": 0.41880597944688813,
+        "stored_focal": 0.8994,
+        "recomputed_focal": 0.8993768185115374,
+        "stored_ss": 0.4806,
+        "recomputed_ss": 0.48057083906464926
+      },
+      {
+        "label": "strher2",
+        "stored_drop": 0.4019,
+        "recomputed_drop": 0.40192130085485556,
+        "stored_focal": 0.9362,
+        "recomputed_focal": 0.9361818164586547,
+        "stored_ss": 0.5343,
+        "recomputed_ss": 0.5342605156037992
+      },
+      {
+        "label": "25092",
+        "stored_drop": 0.3996,
+        "recomputed_drop": 0.3996492396815673,
+        "stored_focal": 0.9638,
+        "recomputed_focal": 0.963839216371544,
+        "stored_ss": 0.5642,
+        "recomputed_ss": 0.5641899766899767
+      },
+      {
+        "label": "trsowl",
+        "stored_drop": 0.3229,
+        "recomputed_drop": 0.3228954051902859,
+        "stored_focal": 0.9607,
+        "recomputed_focal": 0.9607473849076233,
+        "stored_ss": 0.6379,
+        "recomputed_ss": 0.6378519797173374
+      },
+      {
+        "label": "24321",
+        "stored_drop": 0.2793,
+        "recomputed_drop": 0.2792993916666736,
+        "stored_focal": 0.9128,
+        "recomputed_focal": 0.9127844825161054,
+        "stored_ss": 0.6335,
+        "recomputed_ss": 0.6334850908494318
+      }
+    ],
+    "max_abs_drop_err": 4.923968156728131e-05,
+    "ok": true
+  },
+  "drop_summary": {
+    "mean": 0.0410935189108213,
+    "median": -0.002956413206355757,
+    "std": 0.1454298230734084,
+    "min": -0.1688823849458735,
+    "max": 0.41880597944688813,
+    "n_drop_gt_0": 20,
+    "n_drop_gt_0.1": 12
+  },
+  "predictors_of_drop": {
+    "log_focal_prevalence": {
+      "n": 45,
+      "spearman": -0.2663548329121677,
+      "spearman_p": 0.07696286408511699,
+      "pearson": -0.21351131007045923,
+      "pearson_p": 0.1590505601974998
+    },
+    "focal_auc": {
+      "n": 45,
+      "spearman": 0.5026350461133069,
+      "spearman_p": 0.0004337596158647004,
+      "pearson": 0.38450818658753966,
+      "pearson_p": 0.009110406718674828
+    },
+    "centroid_l2": {
+      "n": 45,
+      "spearman": 0.08036890645586296,
+      "spearman_p": 0.5997152681729031,
+      "pearson": 0.18654336479579764,
+      "pearson_p": 0.2198370191519698
+    },
+    "ss_pos": {
+      "n": 45,
+      "spearman": 0.3102169213320492,
+      "spearman_p": 0.03808765645638933,
+      "pearson": 0.030325330548501072,
+      "pearson_p": 0.8432411594966428
+    }
+  },
+  "predictor_ranking_by_abs_spearman": [
+    [
+      "focal_auc",
+      0.5026350461133069
+    ],
+    [
+      "ss_pos",
+      0.3102169213320492
+    ],
+    [
+      "log_focal_prevalence",
+      0.2663548329121677
+    ],
+    [
+      "centroid_l2",
+      0.08036890645586296
+    ]
+  ],
+  "drop_by_taxon": {
+    "Amphibia": {
+      "n": 14,
+      "mean_drop": 0.09164636617190643,
+      "median_drop": 0.0383302125623739
+    },
+    "Mammalia": {
+      "n": 3,
+      "mean_drop": -0.10487023439268135,
+      "median_drop": -0.14299467212487305
+    },
+    "Aves": {
+      "n": 28,
+      "mean_drop": 0.031456068848511154,
+      "median_drop": -0.023213658016289385
+    }
+  },
+  "drop_by_stage": {
+    "sciname_fallback": {
+      "n": 18,
+      "mean_drop": 0.07613109578241677
+    },
+    "exact_ebird": {
+      "n": 27,
+      "mean_drop": 0.017735134329757662
+    }
+  },
+  "per_class": [
+    {
+      "idx": 8,
+      "primary_label": "22961",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 6,
+      "ss_pos": 72,
+      "focal_auc": 0.9718252070262312,
+      "soundscape_auc": 0.7303619408882567,
+      "drop": 0.24146326613797453,
+      "centroid_l2": 3.4007012844085693
+    },
+    {
+      "idx": 9,
+      "primary_label": "22967",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 8,
+      "ss_pos": 310,
+      "focal_auc": 0.99931768942911,
+      "soundscape_auc": 0.8506241714538225,
+      "drop": 0.14869351797528751,
+      "centroid_l2": 2.8294239044189453
+    },
+    {
+      "idx": 10,
+      "primary_label": "22973",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 63,
+      "ss_pos": 426,
+      "focal_auc": 0.9355469047037552,
+      "soundscape_auc": 0.9018993555757868,
+      "drop": 0.03364754912796841,
+      "centroid_l2": 2.6501636505126953
+    },
+    {
+      "idx": 15,
+      "primary_label": "23158",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 26,
+      "ss_pos": 350,
+      "focal_auc": 0.9006488753765165,
+      "soundscape_auc": 0.9282573454913879,
+      "drop": -0.027608470114871442,
+      "centroid_l2": 2.7577052116394043
+    },
+    {
+      "idx": 18,
+      "primary_label": "24279",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 50,
+      "ss_pos": 346,
+      "focal_auc": 0.9553556438209527,
+      "soundscape_auc": 0.9583120570273085,
+      "drop": -0.002956413206355757,
+      "centroid_l2": 2.825930595397949
+    },
+    {
+      "idx": 21,
+      "primary_label": "24321",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 2,
+      "ss_pos": 344,
+      "focal_auc": 0.9127844825161054,
+      "soundscape_auc": 0.6334850908494318,
+      "drop": 0.2792993916666736,
+      "centroid_l2": 3.1481683254241943
+    },
+    {
+      "idx": 24,
+      "primary_label": "25092",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 29,
+      "ss_pos": 48,
+      "focal_auc": 0.963839216371544,
+      "soundscape_auc": 0.5641899766899767,
+      "drop": 0.3996492396815673,
+      "centroid_l2": 3.0528340339660645
+    },
+    {
+      "idx": 26,
+      "primary_label": "326272",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 31,
+      "ss_pos": 46,
+      "focal_auc": 0.9009620746591006,
+      "soundscape_auc": 0.8003400534369687,
+      "drop": 0.10062202122213193,
+      "centroid_l2": 3.1749749183654785
+    },
+    {
+      "idx": 28,
+      "primary_label": "43435",
+      "taxon": "Mammalia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 15,
+      "ss_pos": 24,
+      "focal_auc": 0.8311176150541265,
+      "soundscape_auc": 1.0,
+      "drop": -0.1688823849458735,
+      "centroid_l2": 3.6641292572021484
+    },
+    {
+      "idx": 29,
+      "primary_label": "47144",
+      "taxon": "Mammalia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 45,
+      "ss_pos": 30,
+      "focal_auc": 0.9210693004857042,
+      "soundscape_auc": 0.9238029465930018,
+      "drop": -0.002733646107297538,
+      "centroid_l2": 3.26967716217041
+    },
+    {
+      "idx": 60,
+      "primary_label": "555146",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 18,
+      "ss_pos": 420,
+      "focal_auc": 0.8850198105566657,
+      "soundscape_auc": 0.9560536501935368,
+      "drop": -0.07103383963687115,
+      "centroid_l2": 2.4272022247314453
+    },
+    {
+      "idx": 62,
+      "primary_label": "65377",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 46,
+      "ss_pos": 18,
+      "focal_auc": 0.9155141819001211,
+      "soundscape_auc": 0.9600456621004566,
+      "drop": -0.04453148020033548,
+      "centroid_l2": 4.358240127563477
+    },
+    {
+      "idx": 63,
+      "primary_label": "65380",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 23,
+      "ss_pos": 666,
+      "focal_auc": 0.9986213404022528,
+      "soundscape_auc": 0.9704655394310567,
+      "drop": 0.028155800971196077,
+      "centroid_l2": 2.4743266105651855
+    },
+    {
+      "idx": 64,
+      "primary_label": "66971",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 5,
+      "ss_pos": 298,
+      "focal_auc": 0.9997242853927526,
+      "soundscape_auc": 0.9567114093959732,
+      "drop": 0.04301287599677939,
+      "centroid_l2": 3.1009786128997803
+    },
+    {
+      "idx": 65,
+      "primary_label": "67107",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 17,
+      "ss_pos": 18,
+      "focal_auc": 0.9683301216467675,
+      "soundscape_auc": 0.8114155251141553,
+      "drop": 0.1569145965326122,
+      "centroid_l2": 4.192462921142578
+    },
+    {
+      "idx": 66,
+      "primary_label": "67252",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 6,
+      "ss_pos": 4,
+      "focal_auc": 0.9977210702529331,
+      "soundscape_auc": 1.0,
+      "drop": -0.0022789297470668934,
+      "centroid_l2": 4.52869987487793
+    },
+    {
+      "idx": 69,
+      "primary_label": "74113",
+      "taxon": "Mammalia",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 10,
+      "ss_pos": 4,
+      "focal_auc": 0.7728804974816399,
+      "soundscape_auc": 0.9158751696065129,
+      "drop": -0.14299467212487305,
+      "centroid_l2": 4.440158367156982
+    },
+    {
+      "idx": 74,
+      "primary_label": "bafcur1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 53,
+      "ss_pos": 18,
+      "focal_auc": 0.9725818162875647,
+      "soundscape_auc": 0.9799086757990867,
+      "drop": -0.00732685951152201,
+      "centroid_l2": 3.5595407485961914
+    },
+    {
+      "idx": 93,
+      "primary_label": "bufpar",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 244,
+      "ss_pos": 28,
+      "focal_auc": 0.9644183241587941,
+      "soundscape_auc": 0.9991133004926108,
+      "drop": -0.034694976333816685,
+      "centroid_l2": 2.6050803661346436
+    },
+    {
+      "idx": 94,
+      "primary_label": "bunibi1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 211,
+      "ss_pos": 4,
+      "focal_auc": 0.9183128992084296,
+      "soundscape_auc": 0.7364314789687924,
+      "drop": 0.18188142023963727,
+      "centroid_l2": 4.769615650177002
+    },
+    {
+      "idx": 97,
+      "primary_label": "chacha1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 163,
+      "ss_pos": 130,
+      "focal_auc": 0.9325511389031536,
+      "soundscape_auc": 0.9497603286920794,
+      "drop": -0.017209189788925827,
+      "centroid_l2": 2.1421401500701904
+    },
+    {
+      "idx": 100,
+      "primary_label": "chvcon1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 142,
+      "ss_pos": 70,
+      "focal_auc": 0.9702599191613657,
+      "soundscape_auc": 0.9993100649350649,
+      "drop": -0.029050145773699243,
+      "centroid_l2": 3.2752020359039307
+    },
+    {
+      "idx": 103,
+      "primary_label": "compau",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 558,
+      "ss_pos": 76,
+      "focal_auc": 0.9706329246568165,
+      "soundscape_auc": 0.953675200840904,
+      "drop": 0.01695772381591254,
+      "centroid_l2": 2.830871820449829
+    },
+    {
+      "idx": 104,
+      "primary_label": "compot1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 391,
+      "ss_pos": 6,
+      "focal_auc": 0.9569144129628048,
+      "soundscape_auc": 0.9769021739130435,
+      "drop": -0.019987760950238687,
+      "centroid_l2": 3.7096712589263916
+    },
+    {
+      "idx": 115,
+      "primary_label": "fusfly1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 274,
+      "ss_pos": 6,
+      "focal_auc": 0.9152895135716761,
+      "soundscape_auc": 0.9990942028985507,
+      "drop": -0.08380468932687457,
+      "centroid_l2": 3.4663350582122803
+    },
+    {
+      "idx": 123,
+      "primary_label": "grekis",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 1105,
+      "ss_pos": 4,
+      "focal_auc": 0.8392519354650555,
+      "soundscape_auc": 0.9993215739484397,
+      "drop": -0.16006963848338418,
+      "centroid_l2": 2.802163600921631
+    },
+    {
+      "idx": 132,
+      "primary_label": "hyamac1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 71,
+      "ss_pos": 20,
+      "focal_auc": 0.9719143543826804,
+      "soundscape_auc": 0.9983539094650205,
+      "drop": -0.026439555082340083,
+      "centroid_l2": 3.0296592712402344
+    },
+    {
+      "idx": 136,
+      "primary_label": "limpki",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 421,
+      "ss_pos": 6,
+      "focal_auc": 0.9557396742743606,
+      "soundscape_auc": 0.9397644927536233,
+      "drop": 0.01597518152073729,
+      "centroid_l2": 4.03518009185791
+    },
+    {
+      "idx": 139,
+      "primary_label": "litnig1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 126,
+      "ss_pos": 74,
+      "focal_auc": 0.9586721522963513,
+      "soundscape_auc": 0.914857164857165,
+      "drop": 0.043814987439186326,
+      "centroid_l2": 3.0568790435791016
+    },
+    {
+      "idx": 141,
+      "primary_label": "magant1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 75,
+      "ss_pos": 10,
+      "focal_auc": 0.9624440435248351,
+      "soundscape_auc": 0.8682561307901907,
+      "drop": 0.09418791273464444,
+      "centroid_l2": 3.5859553813934326
+    },
+    {
+      "idx": 144,
+      "primary_label": "nacnig1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 19,
+      "ss_pos": 22,
+      "focal_auc": 0.9993200705112063,
+      "soundscape_auc": 0.8151848151848151,
+      "drop": 0.1841352553263912,
+      "centroid_l2": 3.6867525577545166
+    },
+    {
+      "idx": 148,
+      "primary_label": "orwpar",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 244,
+      "ss_pos": 26,
+      "focal_auc": 0.9168728132596276,
+      "soundscape_auc": 0.9641873278236914,
+      "drop": -0.04731451456406388,
+      "centroid_l2": 3.300016164779663
+    },
+    {
+      "idx": 158,
+      "primary_label": "plcjay1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 204,
+      "ss_pos": 2,
+      "focal_auc": 0.9284311645156011,
+      "soundscape_auc": 0.9647696476964769,
+      "drop": -0.036338483180875736,
+      "centroid_l2": 4.1084723472595215
+    },
+    {
+      "idx": 160,
+      "primary_label": "purjay1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 98,
+      "ss_pos": 10,
+      "focal_auc": 0.9373695742154018,
+      "soundscape_auc": 0.8311989100817438,
+      "drop": 0.10617066413365794,
+      "centroid_l2": 3.986341953277588
+    },
+    {
+      "idx": 165,
+      "primary_label": "redjun",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 231,
+      "ss_pos": 24,
+      "focal_auc": 0.8993768185115374,
+      "soundscape_auc": 0.48057083906464926,
+      "drop": 0.41880597944688813,
+      "centroid_l2": 4.123255729675293
+    },
+    {
+      "idx": 174,
+      "primary_label": "rufhor2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 540,
+      "ss_pos": 8,
+      "focal_auc": 0.8569813264948802,
+      "soundscape_auc": 0.9034013605442176,
+      "drop": -0.046420034049337366,
+      "centroid_l2": 3.5694472789764404
+    },
+    {
+      "idx": 179,
+      "primary_label": "ruther1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 93,
+      "ss_pos": 2,
+      "focal_auc": 0.9059869145704748,
+      "soundscape_auc": 1.0,
+      "drop": -0.09401308542952524,
+      "centroid_l2": 4.163496494293213
+    },
+    {
+      "idx": 180,
+      "primary_label": "rutjac1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 341,
+      "ss_pos": 2,
+      "focal_auc": 0.8934657112719651,
+      "soundscape_auc": 0.9525745257452575,
+      "drop": -0.059108814473292415,
+      "centroid_l2": 3.898162603378296
+    },
+    {
+      "idx": 190,
+      "primary_label": "sibtan2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 292,
+      "ss_pos": 2,
+      "focal_auc": 0.9604471821587164,
+      "soundscape_auc": 1.0,
+      "drop": -0.039552817841283616,
+      "centroid_l2": 3.942708730697632
+    },
+    {
+      "idx": 206,
+      "primary_label": "strher2",
+      "taxon": "Aves",
+      "stage": "sciname_fallback",
+      "mapped": true,
+      "focal_pos": 167,
+      "ss_pos": 4,
+      "focal_auc": 0.9361818164586547,
+      "soundscape_auc": 0.5342605156037992,
+      "drop": 0.40192130085485556,
+      "centroid_l2": 4.588901042938232
+    },
+    {
+      "idx": 211,
+      "primary_label": "thlwre1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 307,
+      "ss_pos": 4,
+      "focal_auc": 0.9087591574829189,
+      "soundscape_auc": 0.9918588873812755,
+      "drop": -0.08309972989835657,
+      "centroid_l2": 3.068955659866333
+    },
+    {
+      "idx": 214,
+      "primary_label": "trsowl",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 507,
+      "ss_pos": 52,
+      "focal_auc": 0.9607473849076233,
+      "soundscape_auc": 0.6378519797173374,
+      "drop": 0.3228954051902859,
+      "centroid_l2": 3.5141448974609375
+    },
+    {
+      "idx": 215,
+      "primary_label": "undtin1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 518,
+      "ss_pos": 86,
+      "focal_auc": 0.8973325225787331,
+      "soundscape_auc": 0.8471331194867682,
+      "drop": 0.05019940309196491,
+      "centroid_l2": 2.320720672607422
+    },
+    {
+      "idx": 219,
+      "primary_label": "wfwduc1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 143,
+      "ss_pos": 2,
+      "focal_auc": 0.9563676734495241,
+      "soundscape_auc": 1.0,
+      "drop": -0.043632326550475886,
+      "centroid_l2": 3.9676384925842285
+    },
+    {
+      "idx": 225,
+      "primary_label": "whtdov",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "mapped": true,
+      "focal_pos": 957,
+      "ss_pos": 126,
+      "focal_auc": 0.8475612139529847,
+      "soundscape_auc": 0.9756738987508218,
+      "drop": -0.1281126847978371,
+      "centroid_l2": 2.4233450889587402
+    }
+  ]
+}

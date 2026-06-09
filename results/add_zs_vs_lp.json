@@ -1,0 +1,2065 @@
+{
+  "task": "zeroshot_vs_linearprobe_paradox",
+  "n_common_classes": 197,
+  "macro_mean_zs_auc_common": 0.9356105831686389,
+  "macro_mean_lp_auc_common": 0.9200777861134798,
+  "macro_gap_zs_minus_lp": 0.01553279705515926,
+  "frac_classes_zs_better": 0.7208121827411168,
+  "gap_vs_prevalence_spearman": {
+    "rho": 0.12598211381375968,
+    "p": 0.0777276670611191,
+    "interpretation": "negative rho => zero-shot advantage concentrates in rare classes (LP underfits)"
+  },
+  "by_prevalence_quartile": {
+    "Q1_rarest": {
+      "n": 51,
+      "npos_range": [
+        2,
+        71
+      ],
+      "mean_gap": 0.010320010439965452,
+      "median_gap": 0.002410362132508226,
+      "mean_zs_auc": 0.9431250073327165,
+      "mean_lp_auc": 0.9328049968927513,
+      "frac_zs_better": 0.5882352941176471
+    },
+    "Q2": {
+      "n": 49,
+      "npos_range": [
+        73,
+        155
+      ],
+      "mean_gap": 0.019982898918545176,
+      "median_gap": 0.02115470522459728,
+      "mean_zs_auc": 0.9443013319479743,
+      "mean_lp_auc": 0.9243184330294288,
+      "frac_zs_better": 0.7551020408163265
+    },
+    "Q3": {
+      "n": 48,
+      "npos_range": [
+        160,
+        315
+      ],
+      "mean_gap": 0.0154482627145741,
+      "median_gap": 0.015106118183003392,
+      "mean_zs_auc": 0.9309109262554666,
+      "mean_lp_auc": 0.9154626635408926,
+      "frac_zs_better": 0.8125
+    },
+    "Q4_commonest": {
+      "n": 49,
+      "npos_range": [
+        326,
+        1105
+      ],
+      "mean_gap": 0.01659105775754829,
+      "median_gap": 0.009700420580598612,
+      "mean_zs_auc": 0.9237024445824534,
+      "mean_lp_auc": 0.9071113868249049,
+      "frac_zs_better": 0.7346938775510204
+    }
+  },
+  "by_taxon": {
+    "Insecta": {
+      "n": 2,
+      "mean_gap": -0.019345138851375676,
+      "mean_zs_auc": 0.9526981452300307,
+      "mean_lp_auc": 0.9720432840814064,
+      "frac_zs_better": 0.0
+    },
+    "Amphibia": {
+      "n": 27,
+      "mean_gap": 0.004887132624834114,
+      "mean_zs_auc": 0.948954562527608,
+      "mean_lp_auc": 0.9440674299027739,
+      "frac_zs_better": 0.6296296296296297
+    },
+    "Mammalia": {
+      "n": 6,
+      "mean_gap": 0.020862458806139444,
+      "mean_zs_auc": 0.8880188665707686,
+      "mean_lp_auc": 0.8671564077646291,
+      "frac_zs_better": 0.3333333333333333
+    },
+    "Aves": {
+      "n": 162,
+      "mean_gap": 0.01754027138186277,
+      "mean_zs_auc": 0.934938285222789,
+      "mean_lp_auc": 0.9173980138409261,
+      "frac_zs_better": 0.7592592592592593
+    }
+  },
+  "per_class": [
+    {
+      "idx": 0,
+      "primary_label": "1161364",
+      "taxon": "Insecta",
+      "stage": "sciname_fallback",
+      "n_pos": 11,
+      "zs_auc": 0.9213696990161618,
+      "lp_auc": 0.9482039711653084,
+      "gap_zs_minus_lp": -0.026834272149146576
+    },
+    {
+      "idx": 2,
+      "primary_label": "1176823",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 12,
+      "zs_auc": 0.9973748018497153,
+      "lp_auc": 0.9453105214283704,
+      "gap_zs_minus_lp": 0.05206428042134492
+    },
+    {
+      "idx": 5,
+      "primary_label": "209233",
+      "taxon": "Mammalia",
+      "stage": "sciname_fallback",
+      "n_pos": 2,
+      "zs_auc": 0.8377922187526373,
+      "lp_auc": 0.8865164430191014,
+      "gap_zs_minus_lp": -0.048724224266464056
+    },
+    {
+      "idx": 6,
+      "primary_label": "22930",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 6,
+      "zs_auc": 0.9999671759089929,
+      "lp_auc": 0.9999859325324256,
+      "gap_zs_minus_lp": -1.8756623432758524e-05
+    },
+    {
+      "idx": 7,
+      "primary_label": "22956",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 32,
+      "zs_auc": 0.9812501759720698,
+      "lp_auc": 0.983580046175071,
+      "gap_zs_minus_lp": -0.0023298702030012386
+    },
+    {
+      "idx": 8,
+      "primary_label": "22961",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 6,
+      "zs_auc": 0.9718252070262312,
+      "lp_auc": 0.8627015164730045,
+      "gap_zs_minus_lp": 0.10912369055322668
+    },
+    {
+      "idx": 9,
+      "primary_label": "22967",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 8,
+      "zs_auc": 0.99931768942911,
+      "lp_auc": 0.9705445823133845,
+      "gap_zs_minus_lp": 0.02877310711572556
+    },
+    {
+      "idx": 10,
+      "primary_label": "22973",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 63,
+      "zs_auc": 0.9355469047037552,
+      "lp_auc": 0.9306518376574173,
+      "gap_zs_minus_lp": 0.004895067046337909
+    },
+    {
+      "idx": 11,
+      "primary_label": "22983",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 10,
+      "zs_auc": 0.9999352823658516,
+      "lp_auc": 0.9999521652269338,
+      "gap_zs_minus_lp": -1.6882861082145872e-05
+    },
+    {
+      "idx": 12,
+      "primary_label": "22985",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 6,
+      "zs_auc": 0.9999906216882837,
+      "lp_auc": 0.9994701253880276,
+      "gap_zs_minus_lp": 0.0005204963002560792
+    },
+    {
+      "idx": 14,
+      "primary_label": "23154",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 5,
+      "zs_auc": 0.5357472428539275,
+      "lp_auc": 0.854501462975467,
+      "gap_zs_minus_lp": -0.31875422012153953
+    },
+    {
+      "idx": 15,
+      "primary_label": "23158",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 26,
+      "zs_auc": 0.9006488753765165,
+      "lp_auc": 0.8450061606889576,
+      "gap_zs_minus_lp": 0.05564271468755888
+    },
+    {
+      "idx": 16,
+      "primary_label": "23176",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 4,
+      "zs_auc": 1.0,
+      "lp_auc": 0.9999999999999999,
+      "gap_zs_minus_lp": 1.1102230246251565e-16
+    },
+    {
+      "idx": 18,
+      "primary_label": "24279",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 50,
+      "zs_auc": 0.9553556438209527,
+      "lp_auc": 0.9713515873686582,
+      "gap_zs_minus_lp": -0.015995943547705505
+    },
+    {
+      "idx": 19,
+      "primary_label": "24285",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 19,
+      "zs_auc": 0.9878560741848994,
+      "lp_auc": 0.9810997378049684,
+      "gap_zs_minus_lp": 0.006756336379931005
+    },
+    {
+      "idx": 20,
+      "primary_label": "24287",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 12,
+      "zs_auc": 0.9999366857078538,
+      "lp_auc": 0.9983796231158135,
+      "gap_zs_minus_lp": 0.001557062592040248
+    },
+    {
+      "idx": 22,
+      "primary_label": "244024",
+      "taxon": "Insecta",
+      "stage": "sciname_fallback",
+      "n_pos": 181,
+      "zs_auc": 0.9840265914438997,
+      "lp_auc": 0.9958825969975045,
+      "gap_zs_minus_lp": -0.011856005553604776
+    },
+    {
+      "idx": 24,
+      "primary_label": "25092",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 29,
+      "zs_auc": 0.963839216371544,
+      "lp_auc": 0.9614253261882573,
+      "gap_zs_minus_lp": 0.0024138901832867488
+    },
+    {
+      "idx": 26,
+      "primary_label": "326272",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 31,
+      "zs_auc": 0.9009620746591006,
+      "lp_auc": 0.9328582145536384,
+      "gap_zs_minus_lp": -0.03189613989453777
+    },
+    {
+      "idx": 27,
+      "primary_label": "41970",
+      "taxon": "Mammalia",
+      "stage": "sciname_fallback",
+      "n_pos": 21,
+      "zs_auc": 0.9652648213079422,
+      "lp_auc": 0.6051417527154974,
+      "gap_zs_minus_lp": 0.3601230685924448
+    },
+    {
+      "idx": 28,
+      "primary_label": "43435",
+      "taxon": "Mammalia",
+      "stage": "sciname_fallback",
+      "n_pos": 15,
+      "zs_auc": 0.8311176150541265,
+      "lp_auc": 0.8988124050205437,
+      "gap_zs_minus_lp": -0.0676947899664172
+    },
+    {
+      "idx": 29,
+      "primary_label": "47144",
+      "taxon": "Mammalia",
+      "stage": "sciname_fallback",
+      "n_pos": 45,
+      "zs_auc": 0.9210693004857042,
+      "lp_auc": 0.9087395473436484,
+      "gap_zs_minus_lp": 0.012329753142055866
+    },
+    {
+      "idx": 55,
+      "primary_label": "476521",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 3,
+      "zs_auc": 0.7350053451865188,
+      "lp_auc": 0.9934920009752621,
+      "gap_zs_minus_lp": -0.2584866557887433
+    },
+    {
+      "idx": 58,
+      "primary_label": "555123",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 3,
+      "zs_auc": 0.9999437348787488,
+      "lp_auc": 0.9990903805397701,
+      "gap_zs_minus_lp": 0.0008533543389787068
+    },
+    {
+      "idx": 59,
+      "primary_label": "555145",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 9,
+      "zs_auc": 0.9964797098730693,
+      "lp_auc": 0.9777840305133496,
+      "gap_zs_minus_lp": 0.01869567935971972
+    },
+    {
+      "idx": 60,
+      "primary_label": "555146",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 18,
+      "zs_auc": 0.8850198105566657,
+      "lp_auc": 0.9364592421641196,
+      "gap_zs_minus_lp": -0.0514394316074539
+    },
+    {
+      "idx": 61,
+      "primary_label": "64898",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 3,
+      "zs_auc": 0.9991091355801871,
+      "lp_auc": 1.0,
+      "gap_zs_minus_lp": -0.0008908644198128979
+    },
+    {
+      "idx": 62,
+      "primary_label": "65377",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 46,
+      "zs_auc": 0.9155141819001211,
+      "lp_auc": 0.9227462712887704,
+      "gap_zs_minus_lp": -0.0072320893886492765
+    },
+    {
+      "idx": 63,
+      "primary_label": "65380",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 23,
+      "zs_auc": 0.9986213404022528,
+      "lp_auc": 0.990832189039748,
+      "gap_zs_minus_lp": 0.007789151362504798
+    },
+    {
+      "idx": 64,
+      "primary_label": "66971",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 5,
+      "zs_auc": 0.9997242853927526,
+      "lp_auc": 0.9501406707179834,
+      "gap_zs_minus_lp": 0.04958361467476924
+    },
+    {
+      "idx": 65,
+      "primary_label": "67107",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 17,
+      "zs_auc": 0.9683301216467675,
+      "lp_auc": 0.8496036712557363,
+      "gap_zs_minus_lp": 0.11872645039103114
+    },
+    {
+      "idx": 66,
+      "primary_label": "67252",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 6,
+      "zs_auc": 0.9977210702529331,
+      "lp_auc": 0.9674947715912181,
+      "gap_zs_minus_lp": 0.030226298661715
+    },
+    {
+      "idx": 67,
+      "primary_label": "70711",
+      "taxon": "Amphibia",
+      "stage": "sciname_fallback",
+      "n_pos": 2,
+      "zs_auc": 0.9967507806565955,
+      "lp_auc": 0.6653585393985428,
+      "gap_zs_minus_lp": 0.33139224125805267
+    },
+    {
+      "idx": 68,
+      "primary_label": "738183",
+      "taxon": "Mammalia",
+      "stage": "sciname_fallback",
+      "n_pos": 5,
+      "zs_auc": 0.9999887463425613,
+      "lp_auc": 1.0,
+      "gap_zs_minus_lp": -1.1253657438703435e-05
+    },
+    {
+      "idx": 69,
+      "primary_label": "74113",
+      "taxon": "Mammalia",
+      "stage": "sciname_fallback",
+      "n_pos": 10,
+      "zs_auc": 0.7728804974816399,
+      "lp_auc": 0.903728298488984,
+      "gap_zs_minus_lp": -0.13084780100734406
+    },
+    {
+      "idx": 72,
+      "primary_label": "ashgre1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 140,
+      "zs_auc": 0.9372023053057537,
+      "lp_auc": 0.9085341499134603,
+      "gap_zs_minus_lp": 0.028668155392293393
+    },
+    {
+      "idx": 73,
+      "primary_label": "astcra1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 142,
+      "zs_auc": 0.9780589658207953,
+      "lp_auc": 0.9732789370447557,
+      "gap_zs_minus_lp": 0.004780028776039669
+    },
+    {
+      "idx": 74,
+      "primary_label": "bafcur1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 53,
+      "zs_auc": 0.9725818162875647,
+      "lp_auc": 0.9507007964756061,
+      "gap_zs_minus_lp": 0.021881019811958557
+    },
+    {
+      "idx": 75,
+      "primary_label": "baffal1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 342,
+      "zs_auc": 0.9856802632783186,
+      "lp_auc": 0.9864379375645825,
+      "gap_zs_minus_lp": -0.000757674286263943
+    },
+    {
+      "idx": 76,
+      "primary_label": "banana",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 616,
+      "zs_auc": 0.9589164610473259,
+      "lp_auc": 0.9241253944006355,
+      "gap_zs_minus_lp": 0.034791066646690405
+    },
+    {
+      "idx": 77,
+      "primary_label": "barant1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 550,
+      "zs_auc": 0.8886266880352426,
+      "lp_auc": 0.8494682705220149,
+      "gap_zs_minus_lp": 0.039158417513227683
+    },
+    {
+      "idx": 78,
+      "primary_label": "batbel1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 304,
+      "zs_auc": 0.9485045937833662,
+      "lp_auc": 0.9335389584935526,
+      "gap_zs_minus_lp": 0.01496563528981354
+    },
+    {
+      "idx": 79,
+      "primary_label": "baymac",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 230,
+      "zs_auc": 0.9528390926425856,
+      "lp_auc": 0.9108853837754528,
+      "gap_zs_minus_lp": 0.04195370886713279
+    },
+    {
+      "idx": 80,
+      "primary_label": "bbwduc",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 505,
+      "zs_auc": 0.9450631511615948,
+      "lp_auc": 0.9719733099322945,
+      "gap_zs_minus_lp": -0.026910158770699688
+    },
+    {
+      "idx": 81,
+      "primary_label": "bcwfin2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 66,
+      "zs_auc": 0.9655865933238197,
+      "lp_auc": 0.9040103711636558,
+      "gap_zs_minus_lp": 0.061576222160163896
+    },
+    {
+      "idx": 82,
+      "primary_label": "bkcdon",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 216,
+      "zs_auc": 0.9486625791018992,
+      "lp_auc": 0.9225210195903315,
+      "gap_zs_minus_lp": 0.026141559511567714
+    },
+    {
+      "idx": 83,
+      "primary_label": "bkhpar",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 113,
+      "zs_auc": 0.9849508074884099,
+      "lp_auc": 0.9820469059513499,
+      "gap_zs_minus_lp": 0.002903901537059994
+    },
+    {
+      "idx": 84,
+      "primary_label": "blchaw1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 59,
+      "zs_auc": 0.9491909871962023,
+      "lp_auc": 0.9398818478349118,
+      "gap_zs_minus_lp": 0.00930913936129052
+    },
+    {
+      "idx": 85,
+      "primary_label": "blheag1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 169,
+      "zs_auc": 0.9389773248015627,
+      "lp_auc": 0.930520536123441,
+      "gap_zs_minus_lp": 0.008456788678121718
+    },
+    {
+      "idx": 86,
+      "primary_label": "blttit1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 73,
+      "zs_auc": 0.9369548697402218,
+      "lp_auc": 0.861074127675743,
+      "gap_zs_minus_lp": 0.07588074206447881
+    },
+    {
+      "idx": 87,
+      "primary_label": "bncfly",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 571,
+      "zs_auc": 0.9389124903028865,
+      "lp_auc": 0.9268767538544869,
+      "gap_zs_minus_lp": 0.012035736448399614
+    },
+    {
+      "idx": 88,
+      "primary_label": "bobfly1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 576,
+      "zs_auc": 0.9267138270554746,
+      "lp_auc": 0.9098472194423,
+      "gap_zs_minus_lp": 0.0168666076131746
+    },
+    {
+      "idx": 89,
+      "primary_label": "brcmar1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 148,
+      "zs_auc": 0.929965999586208,
+      "lp_auc": 0.872745998166184,
+      "gap_zs_minus_lp": 0.057220001420023925
+    },
+    {
+      "idx": 90,
+      "primary_label": "brnowl",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 474,
+      "zs_auc": 0.920665391520882,
+      "lp_auc": 0.9801859788097236,
+      "gap_zs_minus_lp": -0.059520587288841575
+    },
+    {
+      "idx": 91,
+      "primary_label": "bucmot4",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 222,
+      "zs_auc": 0.9564856347274893,
+      "lp_auc": 0.9332840639206875,
+      "gap_zs_minus_lp": 0.02320157080680174
+    },
+    {
+      "idx": 92,
+      "primary_label": "bucpar",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 134,
+      "zs_auc": 0.9609523327875658,
+      "lp_auc": 0.9725670672474139,
+      "gap_zs_minus_lp": -0.011614734459848175
+    },
+    {
+      "idx": 93,
+      "primary_label": "bufpar",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 244,
+      "zs_auc": 0.9644183241587941,
+      "lp_auc": 0.9412754428040424,
+      "gap_zs_minus_lp": 0.023142881354751732
+    },
+    {
+      "idx": 94,
+      "primary_label": "bunibi1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 211,
+      "zs_auc": 0.9183128992084296,
+      "lp_auc": 0.9207136820076611,
+      "gap_zs_minus_lp": -0.0024007827992315045
+    },
+    {
+      "idx": 95,
+      "primary_label": "burowl",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 239,
+      "zs_auc": 0.8988747601933385,
+      "lp_auc": 0.9458245498033555,
+      "gap_zs_minus_lp": -0.046949789610017056
+    },
+    {
+      "idx": 96,
+      "primary_label": "camfli1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 137,
+      "zs_auc": 0.912061027603328,
+      "lp_auc": 0.906321705455118,
+      "gap_zs_minus_lp": 0.0057393221482099355
+    },
+    {
+      "idx": 97,
+      "primary_label": "chacha1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 163,
+      "zs_auc": 0.9325511389031536,
+      "lp_auc": 0.9122098303061867,
+      "gap_zs_minus_lp": 0.02034130859696681
+    },
+    {
+      "idx": 98,
+      "primary_label": "chbmoc1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 284,
+      "zs_auc": 0.9169248227205284,
+      "lp_auc": 0.9161309341944194,
+      "gap_zs_minus_lp": 0.0007938885261090656
+    },
+    {
+      "idx": 99,
+      "primary_label": "chobla1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 394,
+      "zs_auc": 0.89591031595393,
+      "lp_auc": 0.8875534164508591,
+      "gap_zs_minus_lp": 0.008356899503070947
+    },
+    {
+      "idx": 100,
+      "primary_label": "chvcon1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 142,
+      "zs_auc": 0.9702599191613657,
+      "lp_auc": 0.9491052139367684,
+      "gap_zs_minus_lp": 0.02115470522459728
+    },
+    {
+      "idx": 101,
+      "primary_label": "cibspi1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 42,
+      "zs_auc": 0.9480937360439994,
+      "lp_auc": 0.9403839886702422,
+      "gap_zs_minus_lp": 0.007709747373757181
+    },
+    {
+      "idx": 102,
+      "primary_label": "coffal1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 513,
+      "zs_auc": 0.940741653196812,
+      "lp_auc": 0.9418167656904055,
+      "gap_zs_minus_lp": -0.0010751124935934886
+    },
+    {
+      "idx": 103,
+      "primary_label": "compau",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 558,
+      "zs_auc": 0.9706329246568165,
+      "lp_auc": 0.9707497493723168,
+      "gap_zs_minus_lp": -0.00011682471550034101
+    },
+    {
+      "idx": 104,
+      "primary_label": "compot1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 391,
+      "zs_auc": 0.9569144129628048,
+      "lp_auc": 0.9501692323830354,
+      "gap_zs_minus_lp": 0.006745180579769361
+    },
+    {
+      "idx": 105,
+      "primary_label": "crbthr1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 334,
+      "zs_auc": 0.9306435404074713,
+      "lp_auc": 0.9129574444749575,
+      "gap_zs_minus_lp": 0.0176860959325138
+    },
+    {
+      "idx": 106,
+      "primary_label": "crebec1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 84,
+      "zs_auc": 0.9813911099474332,
+      "lp_auc": 0.9597262223654441,
+      "gap_zs_minus_lp": 0.021664887581989034
+    },
+    {
+      "idx": 107,
+      "primary_label": "dwatin1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 23,
+      "zs_auc": 0.9728104829530853,
+      "lp_auc": 0.996743352694536,
+      "gap_zs_minus_lp": -0.023932869741450702
+    },
+    {
+      "idx": 108,
+      "primary_label": "epaori4",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 217,
+      "zs_auc": 0.8970973037327032,
+      "lp_auc": 0.8744634829277099,
+      "gap_zs_minus_lp": 0.02263382080499332
+    },
+    {
+      "idx": 109,
+      "primary_label": "eulfly1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 387,
+      "zs_auc": 0.947609969771513,
+      "lp_auc": 0.9404060305882834,
+      "gap_zs_minus_lp": 0.007203939183229591
+    },
+    {
+      "idx": 110,
+      "primary_label": "fabwre1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 120,
+      "zs_auc": 0.9362048039741455,
+      "lp_auc": 0.9054409288059688,
+      "gap_zs_minus_lp": 0.03076387516817669
+    },
+    {
+      "idx": 111,
+      "primary_label": "fepowl",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 600,
+      "zs_auc": 0.9090895781472049,
+      "lp_auc": 0.9003736873730293,
+      "gap_zs_minus_lp": 0.008715890774175672
+    },
+    {
+      "idx": 112,
+      "primary_label": "ficman1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 68,
+      "zs_auc": 0.9620648250845107,
+      "lp_auc": 0.9596544629520025,
+      "gap_zs_minus_lp": 0.002410362132508226
+    },
+    {
+      "idx": 113,
+      "primary_label": "flawar1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 285,
+      "zs_auc": 0.9118612092845544,
+      "lp_auc": 0.8966146082083611,
+      "gap_zs_minus_lp": 0.015246601076193245
+    },
+    {
+      "idx": 114,
+      "primary_label": "fotfly",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 92,
+      "zs_auc": 0.9544230549925139,
+      "lp_auc": 0.9297860482568597,
+      "gap_zs_minus_lp": 0.024637006735654166
+    },
+    {
+      "idx": 115,
+      "primary_label": "fusfly1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 274,
+      "zs_auc": 0.9152895135716761,
+      "lp_auc": 0.8786528682355009,
+      "gap_zs_minus_lp": 0.036636645336175166
+    },
+    {
+      "idx": 116,
+      "primary_label": "gilhum1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 139,
+      "zs_auc": 0.9474811001241368,
+      "lp_auc": 0.914152609005707,
+      "gap_zs_minus_lp": 0.033328491118429726
+    },
+    {
+      "idx": 117,
+      "primary_label": "giwrai1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 121,
+      "zs_auc": 0.9244760879241054,
+      "lp_auc": 0.9400400719606381,
+      "gap_zs_minus_lp": -0.015563984036532696
+    },
+    {
+      "idx": 118,
+      "primary_label": "glteme1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 137,
+      "zs_auc": 0.9506584019108537,
+      "lp_auc": 0.928209415588431,
+      "gap_zs_minus_lp": 0.02244898632242276
+    },
+    {
+      "idx": 119,
+      "primary_label": "grasal3",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 513,
+      "zs_auc": 0.9163912885370815,
+      "lp_auc": 0.8683882542868188,
+      "gap_zs_minus_lp": 0.048003034250262755
+    },
+    {
+      "idx": 120,
+      "primary_label": "greani1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 144,
+      "zs_auc": 0.9682555233880965,
+      "lp_auc": 0.9379085659589826,
+      "gap_zs_minus_lp": 0.030346957429113863
+    },
+    {
+      "idx": 121,
+      "primary_label": "greant1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 567,
+      "zs_auc": 0.919580132770726,
+      "lp_auc": 0.8947113844489637,
+      "gap_zs_minus_lp": 0.024868748321762335
+    },
+    {
+      "idx": 122,
+      "primary_label": "greela",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 246,
+      "zs_auc": 0.8957473615752501,
+      "lp_auc": 0.8660986341472626,
+      "gap_zs_minus_lp": 0.02964872742798752
+    },
+    {
+      "idx": 123,
+      "primary_label": "grekis",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 1105,
+      "zs_auc": 0.8392519354650555,
+      "lp_auc": 0.7742156065770869,
+      "gap_zs_minus_lp": 0.06503632888796862
+    },
+    {
+      "idx": 124,
+      "primary_label": "grepot1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 75,
+      "zs_auc": 0.9905632294074533,
+      "lp_auc": 0.9072556426302832,
+      "gap_zs_minus_lp": 0.0833075867771701
+    },
+    {
+      "idx": 125,
+      "primary_label": "gretho2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 224,
+      "zs_auc": 0.8955745121827925,
+      "lp_auc": 0.854960949347892,
+      "gap_zs_minus_lp": 0.040613562834900474
+    },
+    {
+      "idx": 126,
+      "primary_label": "greyel",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 477,
+      "zs_auc": 0.9733044224567323,
+      "lp_auc": 0.9880132179719658,
+      "gap_zs_minus_lp": -0.01470879551523352
+    },
+    {
+      "idx": 127,
+      "primary_label": "grfdov1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 276,
+      "zs_auc": 0.9401457965344433,
+      "lp_auc": 0.9111748753100558,
+      "gap_zs_minus_lp": 0.02897092122438749
+    },
+    {
+      "idx": 128,
+      "primary_label": "grhtan1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 98,
+      "zs_auc": 0.9398891485171541,
+      "lp_auc": 0.9087504511832658,
+      "gap_zs_minus_lp": 0.0311386973338883
+    },
+    {
+      "idx": 129,
+      "primary_label": "gycwor1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 449,
+      "zs_auc": 0.9534876807593957,
+      "lp_auc": 0.9617721876407845,
+      "gap_zs_minus_lp": -0.00828450688138882
+    },
+    {
+      "idx": 130,
+      "primary_label": "horscr1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 117,
+      "zs_auc": 0.9482844712298313,
+      "lp_auc": 0.9020606222006085,
+      "gap_zs_minus_lp": 0.04622384902922283
+    },
+    {
+      "idx": 131,
+      "primary_label": "houspa",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 565,
+      "zs_auc": 0.9595851656079442,
+      "lp_auc": 0.9622152427709051,
+      "gap_zs_minus_lp": -0.002630077162960931
+    },
+    {
+      "idx": 132,
+      "primary_label": "hyamac1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 71,
+      "zs_auc": 0.9719143543826804,
+      "lp_auc": 0.957836199223641,
+      "gap_zs_minus_lp": 0.014078155159039318
+    },
+    {
+      "idx": 133,
+      "primary_label": "larela1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 160,
+      "zs_auc": 0.9282298171748283,
+      "lp_auc": 0.9045835217157874,
+      "gap_zs_minus_lp": 0.023646295459040956
+    },
+    {
+      "idx": 134,
+      "primary_label": "lesela1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 131,
+      "zs_auc": 0.9334841386124018,
+      "lp_auc": 0.9124400453644349,
+      "gap_zs_minus_lp": 0.021044093247966855
+    },
+    {
+      "idx": 135,
+      "primary_label": "lesgrf1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 30,
+      "zs_auc": 0.9508727723190404,
+      "lp_auc": 0.9864739059845904,
+      "gap_zs_minus_lp": -0.035601133665549956
+    },
+    {
+      "idx": 136,
+      "primary_label": "limpki",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 421,
+      "zs_auc": 0.9557396742743606,
+      "lp_auc": 0.9611205386097996,
+      "gap_zs_minus_lp": -0.005380864335439051
+    },
+    {
+      "idx": 137,
+      "primary_label": "linwoo1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 377,
+      "zs_auc": 0.8905050843735416,
+      "lp_auc": 0.8850512494717133,
+      "gap_zs_minus_lp": 0.0054538349018282695
+    },
+    {
+      "idx": 138,
+      "primary_label": "litcuc2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 109,
+      "zs_auc": 0.9242578230165469,
+      "lp_auc": 0.844684904839812,
+      "gap_zs_minus_lp": 0.07957291817673495
+    },
+    {
+      "idx": 139,
+      "primary_label": "litnig1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 126,
+      "zs_auc": 0.9586721522963513,
+      "lp_auc": 0.9494936255656692,
+      "gap_zs_minus_lp": 0.00917852673068209
+    },
+    {
+      "idx": 140,
+      "primary_label": "mabpar",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 115,
+      "zs_auc": 0.9393030766323673,
+      "lp_auc": 0.9331685853184488,
+      "gap_zs_minus_lp": 0.006134491313918522
+    },
+    {
+      "idx": 141,
+      "primary_label": "magant1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 75,
+      "zs_auc": 0.9624440435248351,
+      "lp_auc": 0.9570077615530624,
+      "gap_zs_minus_lp": 0.005436281971772705
+    },
+    {
+      "idx": 142,
+      "primary_label": "magtan2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 77,
+      "zs_auc": 0.9744942416627126,
+      "lp_auc": 0.9502307289012295,
+      "gap_zs_minus_lp": 0.024263512761483086
+    },
+    {
+      "idx": 143,
+      "primary_label": "masgna1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 315,
+      "zs_auc": 0.915640916827271,
+      "lp_auc": 0.9084829678404065,
+      "gap_zs_minus_lp": 0.007157948986864504
+    },
+    {
+      "idx": 144,
+      "primary_label": "nacnig1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 19,
+      "zs_auc": 0.9993200705112063,
+      "lp_auc": 0.9447627653428533,
+      "gap_zs_minus_lp": 0.054557305168353
+    },
+    {
+      "idx": 145,
+      "primary_label": "ocecra1",
+      "taxon": "Aves",
+      "stage": "sciname_fallback",
+      "n_pos": 15,
+      "zs_auc": 0.9999849909007337,
+      "lp_auc": 0.9999962477251835,
+      "gap_zs_minus_lp": -1.125682444980125e-05
+    },
+    {
+      "idx": 146,
+      "primary_label": "oliwoo1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 455,
+      "zs_auc": 0.9450309592385162,
+      "lp_auc": 0.9269361344758847,
+      "gap_zs_minus_lp": 0.018094824762631467
+    },
+    {
+      "idx": 147,
+      "primary_label": "orbtro3",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 89,
+      "zs_auc": 0.9472013092771092,
+      "lp_auc": 0.9238673739044468,
+      "gap_zs_minus_lp": 0.023333935372662373
+    },
+    {
+      "idx": 148,
+      "primary_label": "orwpar",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 244,
+      "zs_auc": 0.9168728132596276,
+      "lp_auc": 0.9136987748449692,
+      "gap_zs_minus_lp": 0.0031740384146583533
+    },
+    {
+      "idx": 149,
+      "primary_label": "osprey",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 495,
+      "zs_auc": 0.9508727371852835,
+      "lp_auc": 0.9803667703450896,
+      "gap_zs_minus_lp": -0.029494033159806032
+    },
+    {
+      "idx": 150,
+      "primary_label": "pabspi1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 326,
+      "zs_auc": 0.9880310359115949,
+      "lp_auc": 0.9783306153309963,
+      "gap_zs_minus_lp": 0.009700420580598612
+    },
+    {
+      "idx": 151,
+      "primary_label": "palhor3",
+      "taxon": "Aves",
+      "stage": "sciname_fallback",
+      "n_pos": 86,
+      "zs_auc": 0.9071015057291943,
+      "lp_auc": 0.8938185819612844,
+      "gap_zs_minus_lp": 0.01328292376790996
+    },
+    {
+      "idx": 152,
+      "primary_label": "paltan1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 303,
+      "zs_auc": 0.9202578332508392,
+      "lp_auc": 0.868599278358296,
+      "gap_zs_minus_lp": 0.05165855489254323
+    },
+    {
+      "idx": 153,
+      "primary_label": "phecuc1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 154,
+      "zs_auc": 0.953414158944601,
+      "lp_auc": 0.9139633780543512,
+      "gap_zs_minus_lp": 0.03945078089024978
+    },
+    {
+      "idx": 154,
+      "primary_label": "picpig2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 334,
+      "zs_auc": 0.8651489864230081,
+      "lp_auc": 0.8310486226184576,
+      "gap_zs_minus_lp": 0.034100363804550504
+    },
+    {
+      "idx": 155,
+      "primary_label": "pirfly1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 428,
+      "zs_auc": 0.9502409493800736,
+      "lp_auc": 0.9307780285352615,
+      "gap_zs_minus_lp": 0.01946292084481216
+    },
+    {
+      "idx": 156,
+      "primary_label": "plasla1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 192,
+      "zs_auc": 0.912963221568572,
+      "lp_auc": 0.9114118579772039,
+      "gap_zs_minus_lp": 0.0015513635913680934
+    },
+    {
+      "idx": 157,
+      "primary_label": "platyr1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 38,
+      "zs_auc": 0.8427648067537263,
+      "lp_auc": 0.8448946138261088,
+      "gap_zs_minus_lp": -0.002129807072382417
+    },
+    {
+      "idx": 158,
+      "primary_label": "plcjay1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 204,
+      "zs_auc": 0.9284311645156011,
+      "lp_auc": 0.9233519592587353,
+      "gap_zs_minus_lp": 0.005079205256865893
+    },
+    {
+      "idx": 159,
+      "primary_label": "pluibi1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 95,
+      "zs_auc": 0.8795503736494732,
+      "lp_auc": 0.8930192718214558,
+      "gap_zs_minus_lp": -0.013468898171982602
+    },
+    {
+      "idx": 160,
+      "primary_label": "purjay1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 98,
+      "zs_auc": 0.9373695742154018,
+      "lp_auc": 0.9182689069534897,
+      "gap_zs_minus_lp": 0.019100667261912063
+    },
+    {
+      "idx": 161,
+      "primary_label": "pvttyr1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 286,
+      "zs_auc": 0.9302929297115837,
+      "lp_auc": 0.909674733853051,
+      "gap_zs_minus_lp": 0.02061819585853275
+    },
+    {
+      "idx": 162,
+      "primary_label": "ragmac1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 106,
+      "zs_auc": 0.9712090207023873,
+      "lp_auc": 0.9432032511409496,
+      "gap_zs_minus_lp": 0.028005769561437743
+    },
+    {
+      "idx": 163,
+      "primary_label": "rebscy1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 201,
+      "zs_auc": 0.919059928376675,
+      "lp_auc": 0.907242389388353,
+      "gap_zs_minus_lp": 0.011817538988322052
+    },
+    {
+      "idx": 164,
+      "primary_label": "recfin1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 142,
+      "zs_auc": 0.9468578068234299,
+      "lp_auc": 0.8964439473852748,
+      "gap_zs_minus_lp": 0.05041385943815513
+    },
+    {
+      "idx": 165,
+      "primary_label": "redjun",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 231,
+      "zs_auc": 0.8993768185115374,
+      "lp_auc": 0.9160264108732312,
+      "gap_zs_minus_lp": -0.016649592361693832
+    },
+    {
+      "idx": 166,
+      "primary_label": "relser1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 194,
+      "zs_auc": 0.9432644881737079,
+      "lp_auc": 0.9353355581896143,
+      "gap_zs_minus_lp": 0.007928929984093558
+    },
+    {
+      "idx": 167,
+      "primary_label": "rinkin1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 251,
+      "zs_auc": 0.973486415830248,
+      "lp_auc": 0.9743635238636366,
+      "gap_zs_minus_lp": -0.000877108033388585
+    },
+    {
+      "idx": 168,
+      "primary_label": "rivwar1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 106,
+      "zs_auc": 0.9473052400372854,
+      "lp_auc": 0.9431848852183068,
+      "gap_zs_minus_lp": 0.004120354818978655
+    },
+    {
+      "idx": 169,
+      "primary_label": "roahaw",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 563,
+      "zs_auc": 0.8623559548153188,
+      "lp_auc": 0.8543583127237193,
+      "gap_zs_minus_lp": 0.007997642091599477
+    },
+    {
+      "idx": 170,
+      "primary_label": "rubthr1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 626,
+      "zs_auc": 0.9086185408903695,
+      "lp_auc": 0.8783641217433259,
+      "gap_zs_minus_lp": 0.030254419147043632
+    },
+    {
+      "idx": 171,
+      "primary_label": "rufcac2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 37,
+      "zs_auc": 0.912142754942372,
+      "lp_auc": 0.9091201755934802,
+      "gap_zs_minus_lp": 0.0030225793488917185
+    },
+    {
+      "idx": 172,
+      "primary_label": "rufcas2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 71,
+      "zs_auc": 0.9188721596164734,
+      "lp_auc": 0.8552155710065116,
+      "gap_zs_minus_lp": 0.06365658860996182
+    },
+    {
+      "idx": 173,
+      "primary_label": "rufgna3",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 171,
+      "zs_auc": 0.9489456228620621,
+      "lp_auc": 0.9451259728268038,
+      "gap_zs_minus_lp": 0.003819650035258304
+    },
+    {
+      "idx": 174,
+      "primary_label": "rufhor2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 540,
+      "zs_auc": 0.8569813264948802,
+      "lp_auc": 0.8207243534202318,
+      "gap_zs_minus_lp": 0.03625697307464848
+    },
+    {
+      "idx": 175,
+      "primary_label": "rufnig1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 266,
+      "zs_auc": 0.9913472994619872,
+      "lp_auc": 0.978859123832027,
+      "gap_zs_minus_lp": 0.012488175629960185
+    },
+    {
+      "idx": 176,
+      "primary_label": "ruftho1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 109,
+      "zs_auc": 0.941696005135958,
+      "lp_auc": 0.9540021123697888,
+      "gap_zs_minus_lp": -0.012306107233830854
+    },
+    {
+      "idx": 177,
+      "primary_label": "ruftof1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 128,
+      "zs_auc": 0.9284104503684256,
+      "lp_auc": 0.8524725357132773,
+      "gap_zs_minus_lp": 0.07593791465514832
+    },
+    {
+      "idx": 178,
+      "primary_label": "rumfly1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 311,
+      "zs_auc": 0.901787459423828,
+      "lp_auc": 0.8676878256792716,
+      "gap_zs_minus_lp": 0.03409963374455638
+    },
+    {
+      "idx": 179,
+      "primary_label": "ruther1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 93,
+      "zs_auc": 0.9059869145704748,
+      "lp_auc": 0.8329327156360391,
+      "gap_zs_minus_lp": 0.07305419893443565
+    },
+    {
+      "idx": 180,
+      "primary_label": "rutjac1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 341,
+      "zs_auc": 0.8934657112719651,
+      "lp_auc": 0.8908132299310808,
+      "gap_zs_minus_lp": 0.0026524813408842496
+    },
+    {
+      "idx": 181,
+      "primary_label": "sabspa1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 73,
+      "zs_auc": 0.9771095488827484,
+      "lp_auc": 0.9675964611228582,
+      "gap_zs_minus_lp": 0.009513087759890126
+    },
+    {
+      "idx": 182,
+      "primary_label": "saffin",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 662,
+      "zs_auc": 0.93686829389699,
+      "lp_auc": 0.8926569744337285,
+      "gap_zs_minus_lp": 0.04421131946326151
+    },
+    {
+      "idx": 183,
+      "primary_label": "saytan1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 358,
+      "zs_auc": 0.9145681293258545,
+      "lp_auc": 0.8571159319080599,
+      "gap_zs_minus_lp": 0.057452197417794615
+    },
+    {
+      "idx": 184,
+      "primary_label": "scadov1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 291,
+      "zs_auc": 0.9427765558897311,
+      "lp_auc": 0.8987919000225926,
+      "gap_zs_minus_lp": 0.04398465586713851
+    },
+    {
+      "idx": 185,
+      "primary_label": "schpar1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 160,
+      "zs_auc": 0.9373245394048998,
+      "lp_auc": 0.939485963152392,
+      "gap_zs_minus_lp": -0.002161423747492175
+    },
+    {
+      "idx": 186,
+      "primary_label": "scther1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 109,
+      "zs_auc": 0.9826110029614598,
+      "lp_auc": 0.9837194793629755,
+      "gap_zs_minus_lp": -0.00110847640151579
+    },
+    {
+      "idx": 187,
+      "primary_label": "shcfly1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 279,
+      "zs_auc": 0.8987714842896528,
+      "lp_auc": 0.8862814560080811,
+      "gap_zs_minus_lp": 0.012490028281571752
+    },
+    {
+      "idx": 188,
+      "primary_label": "shshaw",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 101,
+      "zs_auc": 0.8476157238269528,
+      "lp_auc": 0.9378098947335491,
+      "gap_zs_minus_lp": -0.09019417090659632
+    },
+    {
+      "idx": 189,
+      "primary_label": "shtnig1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 169,
+      "zs_auc": 0.9614980716548311,
+      "lp_auc": 0.9416167995156558,
+      "gap_zs_minus_lp": 0.019881272139175343
+    },
+    {
+      "idx": 190,
+      "primary_label": "sibtan2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 292,
+      "zs_auc": 0.9604471821587164,
+      "lp_auc": 0.9234448148060367,
+      "gap_zs_minus_lp": 0.0370023673526797
+    },
+    {
+      "idx": 191,
+      "primary_label": "smbani",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 356,
+      "zs_auc": 0.9257529986332191,
+      "lp_auc": 0.903097150959221,
+      "gap_zs_minus_lp": 0.022655847673998086
+    },
+    {
+      "idx": 192,
+      "primary_label": "smbtin1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 125,
+      "zs_auc": 0.9161181120144534,
+      "lp_auc": 0.9396716350496839,
+      "gap_zs_minus_lp": -0.023553523035230506
+    },
+    {
+      "idx": 193,
+      "primary_label": "sobcac1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 198,
+      "zs_auc": 0.8891565509412246,
+      "lp_auc": 0.8473649824601708,
+      "gap_zs_minus_lp": 0.04179156848105381
+    },
+    {
+      "idx": 194,
+      "primary_label": "sobtyr1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 564,
+      "zs_auc": 0.8973679449247247,
+      "lp_auc": 0.8890628151680001,
+      "gap_zs_minus_lp": 0.008305129756724594
+    },
+    {
+      "idx": 195,
+      "primary_label": "socfly1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 572,
+      "zs_auc": 0.9086947696498259,
+      "lp_auc": 0.8884806869089398,
+      "gap_zs_minus_lp": 0.020214082740886097
+    },
+    {
+      "idx": 196,
+      "primary_label": "sofspi1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 511,
+      "zs_auc": 0.9543453464949265,
+      "lp_auc": 0.9247101469592588,
+      "gap_zs_minus_lp": 0.029635199535667733
+    },
+    {
+      "idx": 197,
+      "primary_label": "souant1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 179,
+      "zs_auc": 0.9452232820478801,
+      "lp_auc": 0.925142902721904,
+      "gap_zs_minus_lp": 0.02008037932597606
+    },
+    {
+      "idx": 198,
+      "primary_label": "soulap1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 650,
+      "zs_auc": 0.9216024043007625,
+      "lp_auc": 0.9124524617192029,
+      "gap_zs_minus_lp": 0.009149942581559545
+    },
+    {
+      "idx": 199,
+      "primary_label": "souscr1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 128,
+      "zs_auc": 0.9338185019127071,
+      "lp_auc": 0.9443852605093024,
+      "gap_zs_minus_lp": -0.010566758596595283
+    },
+    {
+      "idx": 200,
+      "primary_label": "spbant3",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 226,
+      "zs_auc": 0.9424971671043885,
+      "lp_auc": 0.9344723623881654,
+      "gap_zs_minus_lp": 0.008024804716223022
+    },
+    {
+      "idx": 201,
+      "primary_label": "spispi1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 246,
+      "zs_auc": 0.9828487709996778,
+      "lp_auc": 0.9847332120603307,
+      "gap_zs_minus_lp": -0.001884441060652886
+    },
+    {
+      "idx": 202,
+      "primary_label": "sptnig1",
+      "taxon": "Aves",
+      "stage": "sciname_fallback",
+      "n_pos": 3,
+      "zs_auc": 1.0,
+      "lp_auc": 1.0,
+      "gap_zs_minus_lp": 0.0
+    },
+    {
+      "idx": 203,
+      "primary_label": "squcuc1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 451,
+      "zs_auc": 0.917239932181024,
+      "lp_auc": 0.9287890327734861,
+      "gap_zs_minus_lp": -0.01154910059246217
+    },
+    {
+      "idx": 204,
+      "primary_label": "stbwoo2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 248,
+      "zs_auc": 0.9187706918656238,
+      "lp_auc": 0.8883108721218717,
+      "gap_zs_minus_lp": 0.030459819743752115
+    },
+    {
+      "idx": 205,
+      "primary_label": "strcuc1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 549,
+      "zs_auc": 0.9452637262555295,
+      "lp_auc": 0.9363714545927662,
+      "gap_zs_minus_lp": 0.008892271662763296
+    },
+    {
+      "idx": 206,
+      "primary_label": "strher2",
+      "taxon": "Aves",
+      "stage": "sciname_fallback",
+      "n_pos": 167,
+      "zs_auc": 0.9361818164586547,
+      "lp_auc": 0.9419424674476722,
+      "gap_zs_minus_lp": -0.005760650989017457
+    },
+    {
+      "idx": 207,
+      "primary_label": "strowl1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 184,
+      "zs_auc": 0.9106901474683272,
+      "lp_auc": 0.9338834453125481,
+      "gap_zs_minus_lp": -0.02319329784422086
+    },
+    {
+      "idx": 208,
+      "primary_label": "swthum1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 115,
+      "zs_auc": 0.9515081314679342,
+      "lp_auc": 0.9363149124765946,
+      "gap_zs_minus_lp": 0.01519321899133963
+    },
+    {
+      "idx": 209,
+      "primary_label": "swtman1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 437,
+      "zs_auc": 0.9192866579805036,
+      "lp_auc": 0.9312181079388715,
+      "gap_zs_minus_lp": -0.011931449958367923
+    },
+    {
+      "idx": 210,
+      "primary_label": "tattin1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 180,
+      "zs_auc": 0.8900911344209148,
+      "lp_auc": 0.8542212892017806,
+      "gap_zs_minus_lp": 0.03586984521913417
+    },
+    {
+      "idx": 211,
+      "primary_label": "thlwre1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 307,
+      "zs_auc": 0.9087591574829189,
+      "lp_auc": 0.854133643100927,
+      "gap_zs_minus_lp": 0.054625514381991924
+    },
+    {
+      "idx": 212,
+      "primary_label": "toctou1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 172,
+      "zs_auc": 0.9512731961575349,
+      "lp_auc": 0.9471158175953238,
+      "gap_zs_minus_lp": 0.0041573785622111
+    },
+    {
+      "idx": 213,
+      "primary_label": "trokin",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 654,
+      "zs_auc": 0.8906361504785217,
+      "lp_auc": 0.8603887459670405,
+      "gap_zs_minus_lp": 0.030247404511481224
+    },
+    {
+      "idx": 214,
+      "primary_label": "trsowl",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 507,
+      "zs_auc": 0.9607473849076233,
+      "lp_auc": 0.9664549624136582,
+      "gap_zs_minus_lp": -0.0057075775060349
+    },
+    {
+      "idx": 215,
+      "primary_label": "undtin1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 518,
+      "zs_auc": 0.8973325225787331,
+      "lp_auc": 0.823454383315649,
+      "gap_zs_minus_lp": 0.07387813926308406
+    },
+    {
+      "idx": 216,
+      "primary_label": "varant1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 335,
+      "zs_auc": 0.9439379605635141,
+      "lp_auc": 0.9230317572132523,
+      "gap_zs_minus_lp": 0.02090620335026183
+    },
+    {
+      "idx": 217,
+      "primary_label": "watjac1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 155,
+      "zs_auc": 0.9763614937468899,
+      "lp_auc": 0.9180663024715324,
+      "gap_zs_minus_lp": 0.05829519127535743
+    },
+    {
+      "idx": 218,
+      "primary_label": "wesfie1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 142,
+      "zs_auc": 0.9623171713081324,
+      "lp_auc": 0.9682837045431854,
+      "gap_zs_minus_lp": -0.005966533235052918
+    },
+    {
+      "idx": 219,
+      "primary_label": "wfwduc1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 143,
+      "zs_auc": 0.9563676734495241,
+      "lp_auc": 0.9731080505101857,
+      "gap_zs_minus_lp": -0.01674037706066156
+    },
+    {
+      "idx": 220,
+      "primary_label": "whbant2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 76,
+      "zs_auc": 0.9680837686780308,
+      "lp_auc": 0.9080954083684106,
+      "gap_zs_minus_lp": 0.05998836030962018
+    },
+    {
+      "idx": 221,
+      "primary_label": "whbwar2",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 297,
+      "zs_auc": 0.9541508450364686,
+      "lp_auc": 0.9264345772487154,
+      "gap_zs_minus_lp": 0.027716267787753268
+    },
+    {
+      "idx": 222,
+      "primary_label": "whiwoo1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 155,
+      "zs_auc": 0.9574401165132782,
+      "lp_auc": 0.9316127938578983,
+      "gap_zs_minus_lp": 0.025827322655379903
+    },
+    {
+      "idx": 223,
+      "primary_label": "whlspi1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 70,
+      "zs_auc": 0.9676708153314033,
+      "lp_auc": 0.9752106880126272,
+      "gap_zs_minus_lp": -0.007539872681223914
+    },
+    {
+      "idx": 224,
+      "primary_label": "whnjay1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 117,
+      "zs_auc": 0.9257583564424837,
+      "lp_auc": 0.9461966873346417,
+      "gap_zs_minus_lp": -0.020438330892157963
+    },
+    {
+      "idx": 225,
+      "primary_label": "whtdov",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 957,
+      "zs_auc": 0.8475612139529847,
+      "lp_auc": 0.7322440387639836,
+      "gap_zs_minus_lp": 0.11531717518900109
+    },
+    {
+      "idx": 226,
+      "primary_label": "whwpic1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 99,
+      "zs_auc": 0.9106959581712757,
+      "lp_auc": 0.8704315368067131,
+      "gap_zs_minus_lp": 0.04026442136456254
+    },
+    {
+      "idx": 227,
+      "primary_label": "y00678",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 193,
+      "zs_auc": 0.9070136793661159,
+      "lp_auc": 0.9056350301038673,
+      "gap_zs_minus_lp": 0.0013786492622486213
+    },
+    {
+      "idx": 228,
+      "primary_label": "yebcar",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 31,
+      "zs_auc": 0.9292085430558608,
+      "lp_auc": 0.8303686091014278,
+      "gap_zs_minus_lp": 0.09883993395443291
+    },
+    {
+      "idx": 229,
+      "primary_label": "yebela1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 384,
+      "zs_auc": 0.8992160099412294,
+      "lp_auc": 0.8704739413005356,
+      "gap_zs_minus_lp": 0.02874206864069384
+    },
+    {
+      "idx": 230,
+      "primary_label": "yecmac",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 50,
+      "zs_auc": 0.9650395785796784,
+      "lp_auc": 0.9368382207949518,
+      "gap_zs_minus_lp": 0.028201357784726544
+    },
+    {
+      "idx": 231,
+      "primary_label": "yecpar",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 469,
+      "zs_auc": 0.8989255749271237,
+      "lp_auc": 0.8398373015197672,
+      "gap_zs_minus_lp": 0.05908827340735645
+    },
+    {
+      "idx": 232,
+      "primary_label": "yehcar1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 82,
+      "zs_auc": 0.8941687119665344,
+      "lp_auc": 0.8951037962461843,
+      "gap_zs_minus_lp": -0.0009350842796499448
+    },
+    {
+      "idx": 233,
+      "primary_label": "yeofly1",
+      "taxon": "Aves",
+      "stage": "exact_ebird",
+      "n_pos": 555,
+      "zs_auc": 0.9373605101929958,
+      "lp_auc": 0.9284689988039134,
+      "gap_zs_minus_lp": 0.008891511389082396
+    }
+  ]
+}
