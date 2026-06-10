@@ -67,7 +67,7 @@ All numbers below are re-derivable from the released artifacts in [`results/`](r
 - **Post-processing knobs do not help the clean baseline.** On the reproducible Perch zero-shot baseline,
   taxonomy smoothing is null (+0.0008, CI⊇0), cross-taxa gating hurts (−0.0032), and a naive global spatial
   prior strongly hurts (−0.0306). None help. [`results/postproc_ablation.json`]
-- **Honest provenance.** Our Kaggle Bronze (private LB 0.94221, rank **258/4085, top 6.3%**) came from an
+- **Honest provenance.** Our Kaggle Bronze (private LB 0.94221, rank **262/4085, top 6.4%**) came from an
   **attributed community foundation-embedding stack**; our own from-scratch acoustic sidecars added **zero**
   private-LB movement. The medal is *not* the contribution — the reproducible audit is.
 
@@ -245,7 +245,7 @@ If you use this harness, please cite the working note (citation to be finalized 
                Evaluation Forum (LifeCLEF/BirdCLEF++)},
   year      = {2026},
   series    = {CEUR Workshop Proceedings},
-  note      = {Reproducibility package: https://github.com/<OWNER>/birdclef2026-audit}
+  note      = {Reproducibility package: https://github.com/HaochenSHI66/birdclef2026-audit}
 }
 ```
 
